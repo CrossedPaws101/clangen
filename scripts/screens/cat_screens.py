@@ -39,7 +39,11 @@ def accessory_display_name(cat):
         collar_colors = {'crimson': 'red', 'blue': 'blue', 'yellow': 'yellow', 'cyan': 'cyan', 
                          'red': 'orange', 'lime': 'lime', 'green': 'green', 'rainbow': 'rainbow', 
                          'black': 'black', 'spikes': 'spiky', 'white': 'white', 'pink': 'pink', 
-                         'purple': 'purple', 'multi': 'multi', 'indigo': 'indigo'}
+                         'purple': 'purple', 'multi': 'multi', 'indigo': 'indigo',
+                         'mint': 'mint', 'grey': 'grey', 'faded': 'aquatic', 'orange': 'orange', 'gradient': 'sunset',
+                         'palegray': 'pale gray', 'silver': 'silver', 'darkgray': 'dark gray', 'gray': 'gray',
+                         'paleginger': 'pale ginger', 'ginger': 'ginger', 'darkginger': 'dark ginger',
+                         'lightbrown': 'light brown', 'brown': 'brown', 'darkbrown': 'dark brown'}
         collar_color = next((color for color in collar_colors if acc_display.startswith(color)), None)
 
         if collar_color:
@@ -47,6 +51,18 @@ def accessory_display_name(cat):
                 acc_display = collar_colors[collar_color] + ' bow'
             elif acc_display.endswith('bell'):
                 acc_display = collar_colors[collar_color] + ' bell collar'
+            elif acc_display.endswith('yarn'):
+                acc_display = collar_colors[collar_color] + ' yarn ball'
+            elif acc_display.endswith('mane'):
+                acc_display = collar_colors[collar_color] + ' mane'
+            elif acc_display.endswith('scarf'):
+                acc_display = collar_colors[collar_color] + ' scarf'
+            elif acc_display.endswith('scarfs'):
+                acc_display = collar_colors[collar_color] + ' striped scarf'
+            elif acc_display.endswith('spike'):
+                acc_display = collar_colors[collar_color] + ' spiked collar'
+            elif acc_display.endswith('bandana'):
+                acc_display = collar_colors[collar_color] + ' bandana'
             else:
                 acc_display = collar_colors[collar_color] + ' collar'
 

@@ -866,7 +866,27 @@ class Cat():
         elif colour == 'sunlitice':
             colour = 'sunlit ice'
         elif colour == 'greenyellow':
-            colour = 'green-yellow'
+            colour = 'green-yellow'     
+        elif colour == 'paleyellow2':
+            colour = 'pale yellow2'
+        elif colour == 'paleviolet':
+            colour = 'pale violet'
+        elif colour == 'sagegreen':
+            colour = 'sage green'
+        elif colour == 'paleblue2':
+            colour = 'pale blue2'
+        elif colour == 'springgreen':
+            colour = 'spring green'
+        elif colour == 'copper2':
+            colour = 'copper2'
+        elif colour == 'emerald2':
+            colour = 'emerald2'
+        elif colour == 'rosegold':
+            colour = 'rose gold'
+        elif colour == 'darkgreen':
+            colour = 'dark green'
+        elif colour == 'darkamber':
+            colour = 'dark amber'
         if self.eye_colour2 != None:
             if colour2 == 'palegreen':
                 colour2 = 'pale green'

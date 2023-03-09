@@ -3,6 +3,7 @@ from random import choice, randint
 
 # Alphabetical !! yea !!
 from .pelts import (
+    animal_accessories,
     black_colours,
     blue_eyes,
     brown_colours,
@@ -21,6 +22,8 @@ from .pelts import (
     plain,
     plant_accessories,
     point_markings,
+    red_colours,
+    red_eyes,
     scars1,
     scars3,
     skin_sprites,
@@ -28,6 +31,7 @@ from .pelts import (
     tabbies,
     tortiebases,
     torties,
+    violet_eyes,
     vit,
     white_colours,
     wild_accessories,
@@ -153,6 +157,372 @@ def plural_acc_names(accessory, plural, singular):
             acc_display = 'cicada wings'
         if singular:
             acc_display = 'cicada wing'
+    elif acc_display == 'beech leaf':
+        if plural:
+            acc_display = 'beech leaves'
+        if singular:
+            acc_display = 'beech leaf'
+    elif acc_display == 'borage':
+        if plural:
+            acc_display = 'borage flowers'
+        if singular:
+            acc_display = 'borage flower'
+    elif acc_display == 'poppy2':
+        if plural:
+            acc_display = 'poppy flowers'
+        if singular:
+            acc_display = 'poppy flower'
+    elif acc_display == 'juniper2':
+        if plural:
+            acc_display = 'juniper berries'
+        if singular:
+            acc_display = 'juniper berry'
+    elif acc_display == 'coltsfoot':
+        if plural:
+            acc_display = 'coltsfoot flowers'
+        if singular:
+            acc_display = 'coltsfoot flower'
+    elif acc_display == 'daisy':
+        if plural:
+            acc_display = 'daisy flowers'
+        if singular:
+            acc_display = 'daisy flower'
+    elif acc_display == 'oak leaf':
+        if plural:
+            acc_display = 'oak leaves'
+        if singular:
+            acc_display = 'oak leaf'
+    elif acc_display == 'laurel2':
+        if plural:
+            acc_display = 'laurel leaves'
+        if singular:
+            acc_display = 'laurel leaf'
+    elif acc_display == 'bindweed':
+        if plural:
+            acc_display = 'bindweed vines'
+        if singular:
+            acc_display = 'bindweed vine'
+    elif acc_display == 'tormentil':
+        if plural:
+            acc_display = 'tormentil flowers'
+        if singular:
+            acc_display = 'tormentil flower'
+    elif acc_display == 'bright-eye':
+        if plural:
+            acc_display = 'bright-eye flowers'
+        if singular:
+            acc_display = 'bright-eye flower'
+    elif acc_display == 'lavender2':
+        if plural:
+            acc_display = 'lavender'
+        if singular:
+            acc_display = 'lavender'
+    elif acc_display == 'yarrow':
+        if plural:
+            acc_display = 'yarrow clumps'
+        if singular:
+            acc_display = 'yarrow clump'
+                       
+    elif acc_display == 'clovers':
+        if plural:
+            acc_display = 'clovers'
+        if singular:
+            acc_display = 'clover'
+    elif acc_display == 'brown snail':
+        if plural:
+            acc_display = 'brown snails'
+        if singular:
+            acc_display = 'brown snail'
+    elif acc_display == 'worm':
+        if plural:
+            acc_display = 'worms'
+        if singular:
+            acc_display = 'worm'
+    elif acc_display == 'sticks':
+        if plural:
+            acc_display = 'sticks'
+        if singular:
+            acc_display = 'stick'
+    elif acc_display == 'snakeroot':
+        if plural:
+            acc_display = 'snakeroot flowers'
+        if singular:
+            acc_display = 'snakeroot flower'
+    elif acc_display == 'bee':
+        if plural:
+            acc_display = 'small bees'
+        if singular:
+            acc_display = 'small bee'
+    elif acc_display == 'seaweed':
+        if plural:
+            acc_display = 'seaweed'
+        if singular:
+            acc_display = 'strip of seaweed'
+    elif acc_display == 'snake':
+        if plural:
+            acc_display = 'garden snakes'
+        if singular:
+            acc_display = 'garden snake'
+    elif acc_display == 'pumpkins':
+        if plural:
+            acc_display = 'small pumpkins'
+        if singular:
+            acc_display = 'small pumpkin'
+    elif acc_display == 'monarch':
+        if plural:
+            acc_display = 'monarch ribbons'
+        if singular:
+            acc_display = 'monarch ribbon'
+    elif acc_display == 'butterfly':
+        if plural:
+            acc_display = 'blue butterfly ribbons'
+        if singular:
+            acc_display = 'blue butterfly ribbon'
+    elif acc_display == 'ivy wrap':
+        if plural:
+            acc_display = 'ivy wraps'
+        if singular:
+            acc_display = 'ivy wrap'
+    elif acc_display == 'herb wrap':
+        if plural:
+            acc_display = 'herb wraps'
+        if singular:
+            acc_display = 'herb wrap'  
+    elif acc_display == 'brown wrap':
+        if plural:
+            acc_display = 'brown hide and ivy wraps'
+        if singular:
+            acc_display = 'brown hide and ivy wrap'
+    elif acc_display == 'gray wrap':
+        if plural:
+            acc_display = 'gray hide and ivy wraps'
+        if singular:
+            acc_display = 'gray hide and ivy wrap'
+    elif acc_display == 'brown hide':
+        if plural:
+            acc_display = 'brown hides'
+        if singular:
+            acc_display = 'brown hide'
+    elif acc_display == 'gray hide':
+        if plural:
+            acc_display = 'gray hides'
+        if singular:
+            acc_display = 'gray hide'
+    elif acc_display == 'pink hearts':
+        if plural:
+            acc_display = 'pink bleeding hearts'
+        if singular:
+            acc_display = 'pink bleeding heart'
+    elif acc_display == 'red hearts':
+        if plural:
+            acc_display = 'red bleeding hearts'
+        if singular:
+            acc_display = 'red bleeding heart'
+    elif acc_display == 'lilies':
+        if plural:
+            acc_display = 'white lilies'
+        if singular:
+            acc_display = 'white lily'            
+    elif acc_display == 'orange lily':
+        if plural:
+            acc_display = 'orange lilies'
+        if singular:
+            acc_display = 'orange lily'
+    elif acc_display == 'honey':
+        if plural:
+            acc_display = 'honey'
+        if singular:
+            acc_display = 'glob of honey'
+    elif acc_display == 'honeycomb':
+        if plural:
+            acc_display = 'honeycomb'
+        if singular:
+            acc_display = 'honeycomb'
+    elif acc_display == 'red mushrooms':
+        if plural:
+            acc_display = 'red mushrooms'
+        if singular:
+            acc_display = 'red mushroom'  
+    elif acc_display == 'brown mushrooms':
+        if plural:
+            acc_display = 'brown mushrooms'
+        if singular:
+            acc_display = 'brown mushroom'
+    elif acc_display == 'brown frog':
+        if plural:
+            acc_display = 'brown frogs'
+        if singular:
+            acc_display = 'brown frog'
+    elif acc_display == 'snail':
+        if plural:
+            acc_display = 'snails'
+        if singular:
+            acc_display = 'snail'
+    elif acc_display == 'bumblebee':
+        if plural:
+            acc_display = 'bumblebees'
+        if singular:
+            acc_display = 'bumblebee'
+    elif acc_display == 'green frog':
+        if plural:
+            acc_display = 'green frogs'
+        if singular:
+            acc_display = 'green frog'
+    elif acc_display == 'barley':
+        if plural:
+            acc_display = 'barley stalks'
+        if singular:
+            acc_display = 'barley stalk'
+    elif acc_display == 'sunflowers':
+        if plural:
+            acc_display = 'little sunflowers'
+        if singular:
+            acc_display = 'little sunflower'
+    elif acc_display == 'cornflower':
+        if plural:
+            acc_display = 'cornflowers'
+        if singular:
+            acc_display = 'cornflower'
+    elif acc_display == 'dry thistle':
+        if plural:
+            acc_display = 'dry thistles'
+        if singular:
+            acc_display = 'dry thistle'
+    elif acc_display == 'dragonfly wings':
+        if plural:
+            acc_display = 'dragonfly wings'
+        if singular:
+            acc_display = 'pair of dragonfly wings'
+    elif acc_display == 'pine wreaths':
+        if plural:
+            acc_display = 'pine wreaths'
+        if singular:
+            acc_display = 'pine wreath'  
+    elif acc_display == 'rose':
+        if plural:
+            acc_display = 'roses'
+        if singular:
+            acc_display = 'rose'
+    elif acc_display == 'hanging herbs':
+        if plural:
+            acc_display = 'hanging herbs'
+        if singular:
+            acc_display = 'collection of herbs'
+    elif acc_display == 'lily':
+        if plural:
+            acc_display = 'lily pads'
+        if singular:
+            acc_display = 'lily pad'
+    elif acc_display == 'colorful leaves':
+        if plural:
+            acc_display = 'colorful leaves'
+        if singular:
+            acc_display = 'bunch of colorful leaves'
+    elif acc_display == 'acorn branch':
+        if plural:
+            acc_display = 'acorn branches'
+        if singular:
+            acc_display = 'acorn branch'
+    elif acc_display == 'dry fir':
+        if plural:
+            acc_display = 'dry fir sprigs'
+        if singular:
+            acc_display = 'dry fir sprig'
+    elif acc_display == 'pumpkin leaves':
+        if plural:
+            acc_display = 'pumpkin leaves'
+        if singular:
+            acc_display = 'pumpkin leaf'
+    elif acc_display == 'dry moss':
+        if plural:
+            acc_display = 'dry moss'
+        if singular:
+            acc_display = 'coat of dry moss'
+    elif acc_display == 'pinecone':
+        if plural:
+            acc_display = 'pinecones'
+        if singular:
+            acc_display = 'pinecone'
+    elif acc_display == 'thorn collar':
+        if plural:
+            acc_display = 'thorn collars'
+        if singular:
+            acc_display = 'thorn collar'
+    elif acc_display == 'autumn chain':
+        if plural:
+            acc_display = 'chains of autumn leaves'
+        if singular:
+            acc_display = 'chain of autumn leaves'  
+    elif acc_display == 'rowan branch':
+        if plural:
+            acc_display = 'rowan branches'
+        if singular:
+            acc_display = 'rowan branch'
+    elif acc_display == 'roses':
+        if plural:
+            acc_display = 'red roses'
+        if singular:
+            acc_display = 'red rose'
+    elif acc_display == 'bluemoon':
+        if plural:
+            acc_display = 'bluemoon irises'
+        if singular:
+            acc_display = 'bluemoon iris'
+    elif acc_display == 'buttercups':
+        if plural:
+            acc_display = 'golden buttercups'
+        if singular:
+            acc_display = 'golden buttercup'
+    elif acc_display == 'orchids':
+        if plural:
+            acc_display = 'blue orchids'
+        if singular:
+            acc_display = 'blue orchid'
+    elif acc_display == 'autumn':
+        if plural:
+            acc_display = 'autumn leaves'
+        if singular:
+            acc_display = 'few autumn leaves'
+    elif acc_display == 'vines':
+        if plural:
+            acc_display = 'vines'
+        if singular:
+            acc_display = 'collection of vines'
+    elif acc_display == 'grass':
+        if plural:
+            acc_display = 'strands of grass'
+        if singular:
+            acc_display = 'cluster of grass'
+    elif acc_display == 'rainbow flowers':
+        if plural:
+            acc_display = 'rainbow flowers'
+        if singular:
+            acc_display = 'assortment of rainbow flowers'
+    elif acc_display == 'petunia':
+        if plural:
+            acc_display = 'black petunias'
+        if singular:
+            acc_display = 'black petunia'
+    elif acc_display == 'chrysanthemum':
+        if plural:
+            acc_display = 'orange chrysanthemums'
+        if singular:
+            acc_display = 'orange chrysanthemum'  
+    elif acc_display == 'cherry blossom':
+        if plural:
+            acc_display = 'pink cherry blossoms'
+        if singular:
+            acc_display = 'pink cherry blossom'
+    elif acc_display == 'heliotropes':
+        if plural:
+            acc_display = 'purple heliotropes'
+        if singular:
+            acc_display = 'purple heliotrope'
+    elif acc_display == 'valley lilies':
+        if plural:
+            acc_display = 'white valley lilies'
+        if singular:
+            acc_display = 'white valley lily'
 
     if plural is True and singular is False:
         return acc_display
@@ -198,15 +568,16 @@ def init_eyes(cat):
             num = 1
         hit = randint(0, num)
         if hit == 0:
-            if cat.eye_colour in yellow_eyes:
-                eye_choice = choice([blue_eyes, green_eyes])
-                cat.eye_colour2 = choice(eye_choice)
-            elif cat.eye_colour in blue_eyes:
-                eye_choice = choice([yellow_eyes, green_eyes])
-                cat.eye_colour2 = choice(eye_choice)
-            elif cat.eye_colour in green_eyes:
-                eye_choice = choice([yellow_eyes, blue_eyes])
-                cat.eye_colour2 = choice(eye_choice)
+            cat.eye_colour = choice(["BLUEYELLOW", "BLUEGREEN", "GREENGOLD", "PINKBLUE"])
+            #if cat.eye_colour in yellow_eyes:
+            #    eye_choice = choice([blue_eyes, green_eyes])
+                #cat.eye_colour2 = choice(eye_choice)
+            #elif cat.eye_colour in blue_eyes:
+                #eye_choice = choice([yellow_eyes, green_eyes])
+                #cat.eye_colour2 = choice(eye_choice)
+            #elif cat.eye_colour in green_eyes:
+                #eye_choice = choice([yellow_eyes, blue_eyes])
+                #cat.eye_colour2 = choice(eye_choice)
 
 def pelt_inheritance(cat, parents: tuple):
     # setting parent pelt categories
@@ -318,28 +689,30 @@ def pelt_inheritance(cat, parents: tuple):
     # ------------------------------------------------------------------------------------------------------------#
     #   PELT COLOUR
     # ------------------------------------------------------------------------------------------------------------#
-    # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-    weights = [0, 0, 0, 0]
+    # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours, red_colours)
+    weights = [0, 0, 0, 0, 0]
     for p_ in par_peltcolours:
         if p_ in ginger_colours:
-            add_weight = (40, 0, 0, 10)
+            add_weight = (40, 0, 0, 5, 10)
         elif p_ in black_colours:
-            add_weight = (0, 40, 2, 5)
+            add_weight = (0, 40, 2, 5, 2)
         elif p_ in white_colours:
-            add_weight = (0, 5, 40, 0)
+            add_weight = (0, 5, 40, 0, 0)
         elif p_ in brown_colours:
-            add_weight = (10, 5, 0, 35)
+            add_weight = (10, 5, 0, 35, 2)
+        elif p_ in red_colours:
+            add_weight = (10, 0, 0, 5, 40)
         elif p_ is None:
-            add_weight = (40, 40, 40, 40)
+            add_weight = (40, 40, 40, 40, 40)
         else:
-            add_weight = (0, 0, 0, 0)
+            add_weight = (0, 0, 0, 0, 0)
 
         for x in range(0, len(weights)):
             weights[x] += add_weight[x]
 
         # A quick check to make sure all the weights aren't 0
         if all([x == 0 for x in weights]):
-            weights = [1, 1, 1, 1]
+            weights = [1, 1, 1, 1,1]
 
     chosen_pelt_color = choice(
         random.choices(colour_categories, weights=weights, k=1)[0]
@@ -387,7 +760,7 @@ def pelt_inheritance(cat, parents: tuple):
     chosen_white = random.randint(1, 100) <= chance
 
     # Adjustments to pelt chosen based on if the pelt has white in it or not.
-    if chosen_pelt in ["TwoColour", "SingleColour"]:
+    if chosen_pelt in ["TwoColour", "SingleColour", "RSingle"]:
         if chosen_white:
             chosen_pelt = "TwoColour"
         else:
@@ -480,6 +853,20 @@ def init_pelt(cat):
             pelt_inheritance(cat, (par1, par2))
         else:
             randomize_pelt(cat)
+    if cat.pelt.name in ['Abyssinian', 'Pinstripe', 'Merle', 'Ghost', 'Snowflake', 'Cloudy', 'Pointed']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN"])
+    if cat.pelt.name in ['Ragdoll', 'Shaded', 'RTabby', 'RSingle']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM"])
+    if cat.pelt.name in ['Classic', 'Agouti', 'Singlestripe', 'Sokoke']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM", "BLACK",
+                                      "WHITE3", "CLOUD", "BLUE2", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET", "GHOST"])
+    if cat.pelt.name in ['Mackerel', 'Single', 'Tabby', 'Speckled', 'Ticked', 'Smoke', 'Rosette', 'Bengal', 'Marbled']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "CREAM", "LIGHTBROWN", "BROWN", "DARKBROWN",
+                                      "WHITE2", "BLUE", "CARAMEL", "LILAC", "DARK", "BLACK2", "PALE", "APRICOT", "ORANGE", "FAWN", "CINNAMON", "CHOCOLATE", "CREAM2",
+                                      "WHITE3", "CLOUD", "BLUE2", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET", "GHOST"])
+    if cat.pelt.name in ['Spiral']:
+            cat.pelt.colour = choice(["WHITE2", "BLUE", "CARAMEL", "LILAC", "DARK", "BLACK2", "PALE", "APRICOT", "ORANGE", "FAWN", "CINNAMON", "CHOCOLATE", "CREAM2",
+                                      "WHITE3", "CLOUD", "BLUE2", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET"])
 
 def init_sprite(cat):
     if cat.pelt is None:
@@ -529,7 +916,8 @@ def init_accessories(cat):
     if acc_display_choice == 1:
         cat.acc_display = choice([
             choice(plant_accessories),
-            choice(wild_accessories)
+            choice(wild_accessories),
+            choice(animal_accessories)
         ])
     else:
         cat.acc_display = None
@@ -564,9 +952,30 @@ def init_pattern(cat):
             cat.tortiepattern = 'tortiesokoke'
         elif cat.tortiebase == 'agouti':
             cat.tortiepattern = 'tortieagouti'
+        elif cat.tortiebase == 'rsingle':
+            cat.tortiepattern = 'tortiersolid'
+        elif cat.tortiebase == 'rtabby':
+            cat.tortiepattern = 'tortiertabby'
+        elif cat.tortiebase == 'pinstripe':
+            cat.tortiepattern = 'tortiepinstripe'
+        elif cat.tortiebase == 'ghost':
+            cat.tortiepattern = 'tortieghost'
+        elif cat.tortiebase == 'snowflake':
+            cat.tortiepattern = 'tortiesnowflake'
+        elif cat.tortiebase == 'merle':
+            cat.tortiepattern = 'tortiemerle'
         else:
-            cat.tortiepattern = choice(['tortietabby', 'tortiemackerel', 'tortieclassic'])
-
+            cat.tortiepattern = choice(['tortietabby', 'tortiemackerel', 'tortieclassic', 'tortiebrindle'])
+        if cat.tortiepattern in ['tortiepinstripe', 'tortiemerle', 'tortieghost', 'tortiesnowflake', 'tortiertabby', 'tortiersolid']:
+            cat.pelt.colour = choice(["SILVER", "GREY", "DARKGREY", "GHOST", "LIGHTBROWN", "BROWN", "DARKBROWN"])
+        if cat.tortiepattern in ['tortieclassic', 'tortieagouti', 'tortiesokoke']:
+            cat.pelt.colour = choice(["SILVER", "GREY", "DARKGREY", "GHOST", "LIGHTBROWN", "BROWN", "DARKBROWN", "BLACK",
+                                      "BLUE2", "HAZE", "DARKBLUE", "SOOT", "SAND", "BONE", "COFFEE", "MARSH", "OAK", "GHOST"])
+        if cat.tortiepattern in ['tortiemackerel', 'tortiesolid', 'tortietabby', 'tortiespeckled', 'tortieticked', 'tortiesmoke', 'tortierosette', 'tortiebengal', 'tortiemarbled']:
+            cat.pelt.colour = choice(["SILVER", "GREY", "DARKGREY", "BLACK", "LIGHTBROWN", "BROWN", "DARKBROWN",
+                                      "BLUE", "CARAMEL", "LILAC", "DARK", "BLACK2", "FAWN", "CINNAMON", "CHOCOLATE",
+                                      "BLUE2", "HAZE", "DARKBLUE", "SOOT", "SAND", "BONE", "COFFEE", "MARSH", "OAK", "GHOST"])
+        cat.tortiecolour = cat.pelt.colour
     else:
         cat.tortiebase = None
         cat.tortiepattern = None
@@ -576,10 +985,10 @@ def init_pattern(cat):
         if cat.pelt.colour in black_colours:
             cat.pattern = choice(['GOLDONE', 'GOLDTWO', 'GOLDTHREE', 'GOLDFOUR', 'GINGERONE', 'GINGERTWO', 'GINGERTHREE', 'GINGERFOUR',
                                     'DARKONE', 'DARKTWO', 'DARKTHREE', 'DARKFOUR'])
-        elif cat.pelt.colour in brown_colours:
+        elif cat.pelt.colour in brown_colours or red_colours:
             cat.pattern = choice(['GOLDONE', 'GOLDTWO', 'GOLDTHREE', 'GOLDFOUR', 'GINGERONE', 'GINGERTWO', 'GINGERTHREE', 'GINGERFOUR',
-                                  "DARKONE", "DARKTWO", "DARKTHREE", "DARKFOUR"])
-        elif cat.pelt.colour in white_colours:
+                                  'DARKONE', 'DARKTWO', 'DARKTHREE', 'DARKFOUR'])
+        elif cat.pelt.colour in white_colours or red_colours:
             cat.pattern = choice(['PALEONE', 'PALETWO', 'PALETHREE', 'PALEFOUR', 'CREAMONE', 'CREAMTWO', 'CREAMTHREE', 'CREAMFOUR'])
         elif cat.pelt.colour in ['DARKGINGER', "GINGER"]:
             cat.pattern = choice(['PALEONE', 'PALETWO', 'PALETHREE', 'PALEFOUR', 'CREAMONE', 'CREAMTWO', 'CREAMTHREE',

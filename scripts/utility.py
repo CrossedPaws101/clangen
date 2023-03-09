@@ -18,6 +18,7 @@ from scripts.cat.pelts import (
     scars3,
     plant_accessories,
     wild_accessories,
+    animal_accessories,
     collars,
     )
 from scripts.game_structure.game_essentials import game, screen_x, screen_y
@@ -737,6 +738,10 @@ def update_sprite(cat):
                 new_sprite.blit(
                     sprites.sprites['acc_wildextra' + cat.accessory +
                                     str(cat.age_sprites[cat.age])], (0, 0))
+            elif cat.accessory in animal_accessories:
+                new_sprite.blit(
+                    sprites.sprites['acc_animalextra' + cat.accessory +
+                                    str(cat.age_sprites[cat.age])], (0, 0))
             elif cat.accessory in collars:
                 new_sprite.blit(
                     sprites.sprites['collarsextra' + cat.accessory +
@@ -753,6 +758,10 @@ def update_sprite(cat):
             elif cat.accessory in wild_accessories:
                 new_sprite.blit(
                     sprites.sprites['acc_wild' + cat.accessory +
+                                    str(cat.age_sprites[cat.age])], (0, 0))
+            elif cat.accessory in animal_accessories:
+                new_sprite.blit(
+                    sprites.sprites['acc_animal' + cat.accessory +
                                     str(cat.age_sprites[cat.age])], (0, 0))
             elif cat.accessory in collars:
                 new_sprite.blit(

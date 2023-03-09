@@ -8,7 +8,7 @@ except ImportError:
 from scripts.cat.appearance_utility import plural_acc_names
 from scripts.cat.names import names
 from scripts.cat.cats import Cat, cat_class
-from scripts.cat.pelts import plant_accessories, wild_accessories, collars
+from scripts.cat.pelts import plant_accessories, wild_accessories, animal_accessories, collars
 from scripts.clan import HERBS
 from scripts.clan_resources.freshkill import FRESHKILL_EVENT_ACTIVE
 from scripts.conditions import medical_cats_condition_fulfilled, get_amount_cat_for_one_medic
@@ -1139,14 +1139,19 @@ class Events():
             if cat.accessory is None:
                 cat.accessory = random.choice([
                     random.choice(plant_accessories),
-                    random.choice(wild_accessories)
+                    random.choice(wild_accessories),
+                    random.choice(animal_accessories)
                 ])
                 # check if the cat is missing a tail before giving feather acc
-                if cat.accessory in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS']:
+                if cat.accessory in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS',
+                                     'IVY WRAP', 'HERB WRAP', 'BROWN WRAP', 'GRAY WRAP', 'PINK HEARTS', 'RED HEARTS', 'SEAWEED',
+                                     'BLUEMOON', 'BUTTERCUPS', 'AUTUMN', 'VINES', 'RAINBOW FLOWERS',
+                                     'CHERRY BLOSSOM', 'VALLEY LILIES',
+                                     'DRY THISTLE', 'HANGING HERBS', 'COLORFUL LEAVES', 'DRY MOSS', 'PINECONE']:
                     if 'NOTAIL' in cat.scars:
-                        cat.accessory = random.choice(plant_accessories)
+                        cat.accessory = choice([choice(plant_accessories), choice(animal_accessories)])
                     if 'HALFTAIL' in cat.scars:
-                        cat.accessory = random.choice(plant_accessories)
+                        cat.accessory = choice([choice(plant_accessories), choice(animal_accessories)])
                 acc_singular = plural_acc_names(cat.accessory, False, True)
                 acc_plural = plural_acc_names(cat.accessory, True, False)
                 if self.ceremony_accessory is True:
@@ -1157,7 +1162,7 @@ class Events():
                         if game.clan.current_season == 'Leaf-bare':
                             acc_text.append(
                                 f'{name} found a mysterious {acc_singular} growing in the '
-                                f'{random.choice(["snow", "ice", "frost"])} and decided to wear it.')
+                                f'{choice(["snow", "ice", "frost"])} and decided to wear it.')
                         else:
                             acc_text.extend([
                                 f'{name} received a cool {acc_singular} from {other_name} '
@@ -1166,7 +1171,8 @@ class Events():
                                 f'A Clanmate gave {name} some {acc_plural} and they decided to wear them.'
                             ])
                     elif cat.accessory in ["RED FEATHERS", "BLUE FEATHERS",
-                                           "JAY FEATHERS"] and "NOTAIL" in cat.scars:
+                                           "JAY FEATHERS", "IVY WRAP", "HERB WRAP", "BROWN WRAP",
+                                           "GRAY WRAP", "PINK HEARTS", "RED HEARTS", "SEAWEED"] and "NOTAIL" in cat.scars:
                         acc_text.append(f'{name} found a bunch of pretty {acc_plural} and decided to wear them.')
                     elif cat.accessory in ["HERBS", "PETALS", "DRY_HERBS"]:
                         acc_text.append(f'{name} always seems to have {acc_plural} stuck in their fur.')
@@ -1177,6 +1183,12 @@ class Events():
                                                                         f'that they always carry it around.',
                                          f'{acc_plural}'.capitalize() + f' are so vital for {name} that they '
                                                                         f'always have some on them.'
+                                         ])
+                    elif cat.accessory in animal_accessories:
+                        acc_text.extend([f'{name} tries to prank {other_name} by hiding a {acc_singular} in their nest, but it backfires when the prankster instead decides to keep their pranking tool as a pet.',
+                                         f'{name} finds a {acc_singular} in the camp and decides to adopt it as a pet.',
+                                         f'{name} decides to carry {acc_plural} wherever they go.',
+                                         f'{name} can\'t keep hiding their pet {acc_singular} from the Clan anymore.'
                                          ])
                     else:
                         acc_text.extend([f'{name} finds a(n) {acc_singular} and decides to wear it on their pelt.',
@@ -1197,16 +1209,25 @@ class Events():
                             f'{name} received a {acc_singular} from {other_name} and decided to wear it on their pelt.',
                             f'{name} found a {acc_singular} and decided to wear it on their pelt.',
                             f'A Clanmate gave {name} a {acc_singular} and they decided to wear it.'
-
                         ])
                     elif cat.accessory in ["RED FEATHERS", "BLUE FEATHERS",
-                                           "JAY FEATHERS"] and "NOTAIL" in cat.scars:
+                                           "JAY FEATHERS", "IVY WRAP", "HERB WRAP", "BROWN WRAP",
+                                           "GRAY WRAP", "PINK HEARTS", "RED HEARTS", "SEAWEED",
+                                           "BLUEMOON", "BUTTERCUPS", "AUTUMN", "VINES", "RAINBOW FLOWERS",
+                                           "CHERRY BLOSSOM", "VALLEY LILIES",
+                                           "DRY THISTLE", "HANGING HERBS", "COLORFUL LEAVES", "DRY MOSS", "PINECONE"
+                                           ] and "NOTAIL" in cat.scars:
                         acc_text.append(
                             f'{name} was playing with {acc_plural} earlier and decided to wear some of them.')
                     elif cat.accessory in ["HERBS", "PETALS", "DRYHERBS"]:
                         acc_text.append(
                             f'{name}\'s parents try their best to groom them, '
                             f'but something is always stuck in their fur.')
+                    elif cat.accessory in animal_accessories:
+                       acc_text.extend([
+                            f'{name} finds a {acc_singular} inside the camp and begs their parent to let them keep it as a pet.',
+                            f'{name} trips over a {acc_singular}, half-buried in the ground. So adorable! It\'s their pet now.'
+                        ])
                     else:
                         acc_text.extend(
                             [f'{name} seems to have picked up a neat {acc_singular} while playing out in the camp.',

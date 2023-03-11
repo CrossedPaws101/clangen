@@ -20,7 +20,7 @@ from scripts.utility import (
 from scripts.game_structure.game_essentials import game
 from scripts.cat.names import names
 from scripts.cat.cats import Cat, cat_class, ILLNESSES, INJURIES, PERMANENT
-from scripts.cat.pelts import collars, scars1, scars2, scars3
+from scripts.cat.pelts import plant_accessories, wild_accessories, animal_accessories, collars, scars1, scars2, scars3
 from scripts.cat_relations.relationship import Relationship
 from scripts.clan_resources.freshkill import ADDITIONAL_PREY, PREY_REQUIREMENT, HUNTER_EXP_BONUS, HUNTER_BONUS, FRESHKILL_ACTIVE
 from scripts.clan import Clan
@@ -1127,12 +1127,25 @@ class Patrol():
                 gender = 'female'
             if age < 16:
                 age = 16
+            if choice([0, 2]) == 0:
+                accessory = choice([
+                    choice(plant_accessories),
+                    choice(wild_accessories),
+                    choice(collars)
+                ])
 
         if litter or kit:
             if age == 'newborn':
                 age = 0
             else:
                 age = randint(0, 5)
+            if choice([0, 2]) == 0:
+                accessory = choice([
+                    choice(plant_accessories),
+                    choice(wild_accessories),
+                    choice(collars),
+                    choice(animal_accessories)
+                ])
 
         kp_name_chance = (1, 5)
 
@@ -1146,11 +1159,24 @@ class Patrol():
                 status = "warrior"
             else:
                 status = "apprentice"
+            if choice([0, 2]) == 0:
+                accessory = choice([
+                    choice(plant_accessories),
+                    choice(wild_accessories),
+                    choice(collars)
+                ])
+            
         if kittypet:
-            if choice([1, 2]) == 1:
+            if choice([0, 1]) >= 0:
                 accessory = choice(collars)
         if med:
             status = "medicine cat"
+            if choice([0, 2]) == 0:
+                accessory = choice([
+                    choice(plant_accessories),
+                    choice(wild_accessories),
+                    choice(animal_accessories)
+                ])
 
         amount = choice([1, 1, 2, 2, 2, 3]) if litter else 1
         created_cats = []

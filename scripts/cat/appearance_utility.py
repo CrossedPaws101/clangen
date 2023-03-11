@@ -680,7 +680,7 @@ def pelt_inheritance(cat, parents: tuple):
     chosen_tortie_base = None
     if torbie:
         # If it is tortie, the chosen pelt above becomes the base pelt.
-        chosen_tortie_base = chosen_pelt
+        chosen_tortie_base = random.choice(tortiebases)
         if chosen_tortie_base in ["TwoColour", "SingleColour"]:
             chosen_tortie_base = "Single"
         chosen_tortie_base = chosen_tortie_base.lower()
@@ -834,8 +834,9 @@ def randomize_pelt(cat):
             chosen_pelt = "Tortie"
 
     cat.pelt = choose_pelt(chosen_pelt_color, chosen_white, chosen_pelt, chosen_pelt_length)
-    cat.tortiebase = chosen_tortie_base   # This will be none if the cat isn't a tortie.
-
+    # cat.tortiebase = chosen_tortie_base   # This will be none if the cat isn't a tortie.
+    cat.tortiebase = choice(tortiebases)
+    
 def init_pelt(cat):
     if cat.pelt is not None:
         return cat.pelt

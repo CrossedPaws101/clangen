@@ -1142,7 +1142,7 @@ class Events():
                     random.choice(wild_accessories)
                 ])
                 # check if the cat is missing a tail before giving feather acc
-                if cat.accessory in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS']:
+                if cat.accessory in ['RED FEATHERS', 'BLUE FEATHERS', 'JAY FEATHERS', 'SHELL PACK', 'VINE', 'CLOVERS', 'MOSS', 'FLOWER MOSS', 'LADYBUGS']:
                     if 'NOTAIL' in cat.scars:
                         cat.accessory = random.choice(plant_accessories)
                     if 'HALFTAIL' in cat.scars:
@@ -1166,10 +1166,14 @@ class Events():
                                 f'A Clanmate gave {name} some {acc_plural} and they decided to wear them.'
                             ])
                     elif cat.accessory in ["RED FEATHERS", "BLUE FEATHERS",
-                                           "JAY FEATHERS"] and "NOTAIL" in cat.scars:
+                                           "JAY FEATHERS", "SHELL PACK", "VINE", "CLOVERS", "MOSS", "FLOWER MOSS", "LADYBUGS"] and "NOTAIL" in cat.scars:
                         acc_text.append(f'{name} found a bunch of pretty {acc_plural} and decided to wear them.')
                     elif cat.accessory in ["HERBS", "PETALS", "DRY_HERBS"]:
                         acc_text.append(f'{name} always seems to have {acc_plural} stuck in their fur.')
+                    elif cat.accessory in ["ASHY PAWS"]:
+                        acc_text.append(f'{name} always seems to have {acc_plural} after being trapped in a small fire.')
+                    elif cat.accessory in ["MUD PAWS"]:
+                        acc_text.append(f'{name} always seems to have {acc_plural} after nearly drowning in a mud hole.')
                     elif cat.accessory in plant_accessories and cat.status in ['medicine cat apprentice',
                                                                                'medicine cat']:
                         acc_text.extend([f'{name} has decided to always bring some {acc_plural} with them.',
@@ -1200,13 +1204,18 @@ class Events():
 
                         ])
                     elif cat.accessory in ["RED FEATHERS", "BLUE FEATHERS",
-                                           "JAY FEATHERS"] and "NOTAIL" in cat.scars:
+                                           "JAY FEATHERS", "SHELL PACK", "VINE", "CLOVERS", "MOSS", "FLOWER MOSS", "LADYBUGS"] and "NOTAIL" in cat.scars:
                         acc_text.append(
                             f'{name} was playing with {acc_plural} earlier and decided to wear some of them.')
                     elif cat.accessory in ["HERBS", "PETALS", "DRYHERBS"]:
                         acc_text.append(
                             f'{name}\'s parents try their best to groom them, '
                             f'but something is always stuck in their fur.')
+                    elif cat.accessory in ["MUD PAWS", "ASHY PAWS"]:
+                        acc_text.extend([
+                            f'{name}\'s parents try their best to groom them, '
+                            f'but {name} always seems to have {acc_plural}.',
+                            f'{name} snuck out of camp and now seems to always have {acc_plural}.'])
                     else:
                         acc_text.extend(
                             [f'{name} seems to have picked up a neat {acc_singular} while playing out in the camp.',

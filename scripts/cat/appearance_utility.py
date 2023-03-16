@@ -154,6 +154,138 @@ def plural_acc_names(accessory, plural, singular):
         if singular:
             acc_display = 'cicada wing'
 
+# wild's accessories
+    elif acc_display == 'lilypad':
+        if plural:
+            acc_display = 'lilypads'
+        if singular:
+            acc_display = 'lilypad'
+    elif acc_display == 'large deathberry':
+        if plural:
+            acc_display = 'large deathberries'
+        if singular:
+            acc_display = 'large collection of deathberries'
+    elif acc_display == 'small deathberry':
+        if plural:
+            acc_display = 'small deathberries'
+        if singular:
+            acc_display = 'small deathberry'
+    elif acc_display == 'acorn':
+        if plural:
+            acc_display = 'acorns'
+        if singular:
+            acc_display = 'acorn'
+    elif acc_display == 'pinecone':
+        if plural:
+            acc_display = 'pinecones'
+        if singular:
+            acc_display = 'pinecone'
+    elif acc_display == 'vine':
+        if plural:
+            acc_display = 'vines'
+        if singular:
+            acc_display = 'bundle of vines'
+    elif acc_display == 'cherry':
+        if plural:
+            acc_display = 'cherries'
+        if singular:
+            acc_display = 'cherry'
+    elif acc_display == 'bleeding hearts':
+        if plural:
+            acc_display = 'bleeding hearts'
+        if singular:
+            acc_display = 'bleeding heart'
+    elif acc_display == 'shell pack':
+        if plural:
+            acc_display = 'sea accessories'
+        if singular:
+            acc_display = 'collection of sea accessories'
+    elif acc_display == 'ferns':
+        if plural:
+            acc_display = 'ferns'
+        if singular:
+            acc_display = 'fern'
+    elif acc_display == 'gold ferns':
+        if plural:
+            acc_display = 'gold ferns'
+        if singular:
+            acc_display = 'gold fern'
+    elif acc_display == 'wheat':
+        if plural:
+            acc_display = 'wheat stalks'
+        if singular:
+            acc_display = 'wheat stalk'
+    elif acc_display == 'black wheat':
+        if plural:
+            acc_display = 'black wheat stalks'
+        if singular:
+            acc_display = 'black wheat stalk'
+    elif acc_display == 'berries':
+        if plural:
+            acc_display = 'berries'
+        if singular:
+            acc_display = 'berry'
+    elif acc_display == 'clovers':
+        if plural:
+            acc_display = 'clover bunches'
+        if singular:
+            acc_display = 'bunch of clovers'
+    elif acc_display == 'clover':
+        if plural:
+            acc_display = 'clovers'
+        if singular:
+            acc_display = 'clover'
+    elif acc_display == 'moss':
+        if plural:
+            acc_display = 'moss'
+        if singular:
+            acc_display = 'bundle of moss'
+    elif acc_display == 'flower moss':
+        if plural:
+            acc_display = 'flowering moss'
+        if singular:
+            acc_display = 'bundle of flowering moss'
+    elif acc_display == 'mushrooms':
+        if plural:
+            acc_display = 'mushrooms'
+        if singular:
+            acc_display = 'mushroom'
+    elif acc_display == 'large luna':
+        if plural:
+            acc_display = 'large luna moth wings'
+        if singular:
+            acc_display = 'large luna moth wing'
+    elif acc_display == 'large comet':
+        if plural:
+            acc_display = 'large comet moth wings'
+        if singular:
+            acc_display = 'large comet moth wing'
+    elif acc_display == 'small luna':
+        if plural:
+            acc_display = 'small luna moth wings'
+        if singular:
+            acc_display = 'small luna moth wing'
+    elif acc_display == 'small comet':
+        if plural:
+            acc_display = 'small comet moth wings'
+        if singular:
+            acc_display = 'small comet moth wing'
+    elif acc_display == 'ladybugs':
+        if plural:
+            acc_display = 'ladybug'
+        if singular:
+            acc_display = 'ladybugs'
+    elif acc_display == 'mud paws':
+        if plural:
+            acc_display = 'muddy paws'
+        if singular:
+            acc_display = 'muddy paws'
+    elif acc_display == 'ashy paws':
+        if plural:
+            acc_display = 'ashy paws'
+        if singular:
+            acc_display = 'ashy paws'
+
     if plural is True and singular is False:
         return acc_display
     elif singular is True and plural is False:

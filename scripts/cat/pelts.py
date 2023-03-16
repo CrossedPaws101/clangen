@@ -267,9 +267,17 @@ scars3 = ["SNAKE", "TOETRAP", "BURNPAWS", "BURNTAIL", "BURNBELLY", "BURNRUMP", "
 
 plant_accessories = ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL",
                     "BLUEBELLS", "NETTLE", "POPPY", "LAVENDER", "HERBS", "PETALS", "DRY HERBS",
-                    "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER"
+                    "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER",
+                    "LILYPAD", "LARGE DEATHBERRY", "SMALL DEATHBERRY", "ACORN", "PINECONE", "VINE",
+                    "CHERRY", "BLEEDING HEARTS", "SHELL PACK", "FERNS", "GOLD FERNS", "WHEAT", "BLACK WHEAT",
+                    "BERRIES", "CLOVERS", "CLOVER", "MOSS", "FLOWER MOSS", "MUSHROOMS"
+                     
+
 ]
-wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"
+wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS",
+                    "LARGE LUNA", "LARGE COMET", "SMALL LUNA", "SMALL COMET", "LADYBUG",
+                    "MUD PAWS", "ASHY PAWS"
+                    
 ]
 collars = [
     "CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME", "GREEN", "RAINBOW",

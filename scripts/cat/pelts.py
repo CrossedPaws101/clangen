@@ -247,28 +247,286 @@ class Calico():
 
     def __repr__(self):
         return f"calico{self.length}"
+    
+    
+class Freckled():
+    name = "Freckled"
+    sprites = {1: 'freckled', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} freckled{self.length}"
+        else:
+            return f"{self.colour} freckled{self.length}"
+
+class Mosaic():
+    name = "Mosaic"
+    sprites = {1: 'mosaic', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} mosaic{self.length}"
+        else:
+            return f"{self.colour} mosaic{self.length}"
+
+class Lynx():
+    name = "Lynx"
+    sprites = {1: 'lynx', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} lynx{self.length}"
+        else:
+            return f"{self.colour} lynx{self.length}"
+        
+class Moro():
+    name = "Moro"
+    sprites = {1: 'moro', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} moro{self.length}"
+        else:
+            return f"{self.colour} moro{self.length}"
+
+class Morotabby():
+    name = "Morotabby"
+    sprites = {1: 'morotabby', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} morotabby{self.length}"
+        else:
+            return f"{self.colour} morotabby{self.length}"
+
+class Pointed():
+    name = "Pointed"
+    sprites = {1: 'pointed', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} pointed{self.length}"
+        else:
+            return f"{self.colour} pointed{self.length}"
+
+class Abyssinian():
+    name = "Abyssinian"
+    sprites = {1: 'abyssinian', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} abyssinian{self.length}"
+        else:
+            return f"{self.colour} abyssinian{self.length}"
+    
+class Clouded():
+    name = "Clouded"
+    sprites = {1: 'clouded', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} clouded{self.length}"
+        else:
+            return f"{self.colour} clouded{self.length}"
+
+class Doberman():
+    name = "Doberman"
+    sprites = {1: 'doberman', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} doberman{self.length}"
+        else:
+            return f"{self.colour} doberman{self.length}"
+
+class Ghost():
+    name = "Ghost"
+    sprites = {1: 'ghost', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} ghost{self.length}"
+        else:
+            return f"{self.colour} ghost{self.length}"
+
+class Merle():
+    name = "Merle"
+    sprites = {1: 'merle', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} merle{self.length}"
+        else:
+            return f"{self.colour} merle{self.length}"
+
+class Monarch():
+    name = "Monarch"
+    sprites = {1: 'monarch', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} monarch{self.length}"
+        else:
+            return f"{self.colour} monarch{self.length}"
+
+class Oceloid():
+    name = "Oceloid"
+    sprites = {1: 'oceloid', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} oceloid{self.length}"
+        else:
+            return f"{self.colour} oceloid{self.length}"
+    
+class Pinstripe():
+    name = "Pinstripe"
+    sprites = {1: 'pinstripe', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} pinstripe{self.length}"
+        else:
+            return f"{self.colour} pinstripe{self.length}"
+
+class Snowflake():
+    name = "Snowflake"
+    sprites = {1: 'snowflake', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} snowflake{self.length}"
+        else:
+            return f"{self.colour} snowflake{self.length}"
+
+class Ghostsmoke():
+    name = "Ghostsmoke"
+    sprites = {1: 'ghostsmoke', 2: 'white'}
+
+    def __init__(self, colour, white, length):
+        self.white = white  
+        self.colour = colour
+        self.length = length
+
+    def __repr__(self):
+        if self.white:
+            return f"white and {self.colour} ghostsmoke{self.length}"
+        else:
+            return f"{self.colour} ghostsmoke{self.length}"
 
 
 # ATTRIBUTES, including non-pelt related
 pelt_colours = [
     'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'PALEGINGER',
     'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN',
-    'BLACK'
+    'BLACK',
+    'WHITETWO', 'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SOOT', 'IVORY', 'SAND',
+    'SUNBURST', 'RUSSET', 'BONE', 'LEMON', 'COFFEE', 'MARSH', 'OAK', 'RUBY',
+    'PEACH', 'SCARLET'
 ]
 pelt_c_no_white = [
     'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'PALEGINGER', 'GOLDEN',
-    'GINGER', 'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK'
+    'GINGER', 'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK',
+    'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SOOT', 'IVORY', 'SAND',
+    'SUNBURST', 'RUSSET', 'BONE', 'LEMON', 'COFFEE', 'MARSH', 'OAK', 'RUBY',
+    'PEACH', 'SCARLET'
 ]
 pelt_c_no_bw = [
     'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'PALEGINGER', 'GOLDEN', 'GINGER',
-    'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN'
+    'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN',
+    'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SOOT', 'IVORY', 'SAND',
+    'SUNBURST', 'RUSSET', 'BONE', 'LEMON', 'COFFEE', 'MARSH', 'OAK', 'RUBY',
+    'PEACH', 'SCARLET'
 ]
 
 tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE', 'MINIMALFOUR',
                   'OREO', 'SWOOP', 'MOTTLED', 'SIDEMASK', 'EYEDOT', 'BANDANA', 'PACMAN', 'STREAMSTRIKE', 'ORIOLE',
-                  'ROBIN', 'BRINDLE', 'PAIGE']
+                  'ROBIN', 'BRINDLE', 'PAIGE',
+                  'CLASSICMASK', 'SINGLESTRIPEMASK', 'AGOUTMASK', 'BENGALMASK', 'TABBYMASK', 'SOKOKEMASK', 
+                  'SPECKLEDMASK', 'TICKEDMASK', 'SMOKEMASK', 'ROSETTEMASK', 'MARBLEDMASK', 'MACKERELMASK',
+                  'BROKENONE', 'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE', 
+                  'STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL', 
+                  'PONITMASK', 'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOOSTONE',
+]
 tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
-               'classic', 'sokoke', 'agouti', 'singlestripe']
+               'classic', 'sokoke', 'agouti', 'singlestripe',
+               'freckled', 'mosaic', 'moro', 'morotabby', 'lynx', 'pointed', 'abyssinian', 'clouded', 'doberman', 'ghost',
+               'merle', 'monarch', 'oceloid', 'pinstripe', 'snowflake', 'ghostsmoke']
 
 pelt_length = ["short", "medium", "long"]
 eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 
@@ -283,16 +541,32 @@ scars1 = ["ONE", "TWO", "THREE", "TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT",
           "BOTHBLIND", "BEAKCHEEK", "BEAKLOWER", "CATBITE", "RATBITE", "QUILLCHUNK", "QUILLSCRATCH"]
 scars2 = ["LEFTEAR", "RIGHTEAR", "NOTAIL", "HALFTAIL", "NOPAW", "NOLEFTEAR", "NORIGHTEAR", "NOEAR"]
 scars3 = ["SNAKE", "TOETRAP", "BURNPAWS", "BURNTAIL", "BURNBELLY", "BURNRUMP", "FROSTFACE", "FROSTTAIL", "FROSTMITT",
-          "FROSTSOCK", ]
+          "FROSTSOCK"]
 
 # make sure to add plural and singular forms of new accs to acc_display.json so that they will display nicely
 plant_accessories = ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL",
                      "BLUEBELLS", "NETTLE", "POPPY", "LAVENDER", "HERBS", "PETALS", "DRY HERBS",
-                     "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER"
+                     "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER",
+                     "BARLEY", "SUNFLOWERS", "CORNFLOWER", "DRY THISTLE", "DRAGONFLY WINGS", "PINE WREATH",
+                     "ROSE", "HANGING HERBS", "LILY", "HARE TAIL", "WILDFLOWERS WREATH", "SEAGLASS",
+                     "PUMPKIN LEAVES", "DRY MOSS", "PINECONE", "THORN COLLAR", "AUTUMN CHAIN", "ROWAN BRANCH",
+                     "COLORFUL LEAVES", "ACORN BRANCH", "DRY FIR", "DRY ROSE", "SPIDER'S WEB", "CROW FEATHERS",
+                     "IVY WRAP", "HERB WRAP", "PINK HEARTS", "RED HEARTS", "LILIES",
+                     
+                     "CHERRY BLOSSOM", "TULIP PETALS", "CLOVER FLOWER", "PANSIES", "BELLFLOWERS", "FORSYTHIA",
+                     "MINT LEAF", "STICKS", "SPRING FEATHERS", "SNAIL SHELL", "CATKIN", "FERN",
+                     "STRAW MANE", "MISTLETOE", "RED POINSETTIA", "WHITE POINSETTIA", "COTONEASTER WREATH", "YEW",
+                     "OAK STICK ANTLERS", "BIRCH STICK ANTLERS", "DOGWOOD", "FROSTED IVY", "HEATHER", "FANGS"
                      ]
-wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"
+wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS",
+                    "MONARCH", "BUTTERFLY", "BROWN HIDE", "GRAY HIDE", "BROWN WRAP", "GRAY WRAP"
                     ]
-tail_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS"]
+tail_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS",
+                    "BROWN WRAP", "GRAY WRAP", "IVY WRAP", "HERB WRAP", "PINK HEARTS", "RED HEARTS",
+                    "DRY THISTLE", "HANGING HERBS", "LILY", "SEAGLASS", "DRY MOSS", "PINECONE",
+                    "COLORFUL LEAVES", "SPIDER'S WEB", "CROW FEATHERS",
+                    "CHERRY BLOSSOM", "CLOVER FLOWER", "FORSYTHIA",
+                    "SPRING FEATHERS", "FERN", "MISTLETOE"]
 collars = [
     "CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME", "GREEN", "RAINBOW",
     "BLACK", "SPIKES", "WHITE", "PINK", "PURPLE", "MULTI", "INDIGO", "CRIMSONBELL", "BLUEBELL",
@@ -305,23 +579,28 @@ collars = [
     "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
 ]
 
-tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
-spotted = ["Speckled", "Rosette"]
+tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Pinstripe", "Ghost", "Monarch", "Clouded", "Ghostsmoke"]
+spotted = ["Speckled", "Rosette", "Oceloid"]
 plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe"]
-exotic = ["Bengal", "Marbled"]
+exotic = ["Bengal", "Marbled", "Freckled", "Mosaic", "Lynx", "Moro", "Morotabby", "Pointed",
+          "Abyssinian", "Doberman", "Merle", "Snowflake"]
 torties = ["Tortie", "Calico"]
 pelt_categories = [tabbies, spotted, plain, exotic, torties]
 
 # SPRITE NAMES
 single_colours = [
     'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'PALEGINGER',
-    'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK'
+    'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM', 'LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK',
+    'WHITETWO', 'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SOOT', 'IVORY', 'SAND',
+    'SUNBURST', 'RUSSET', 'BONE', 'LEMON', 'COFFEE', 'MARSH', 'OAK', 'RUBY',
+    'PEACH', 'SCARLET'
 ]
-ginger_colours = ['PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM']
-black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK']
-white_colours = ['WHITE', 'PALEGREY', 'SILVER']
-brown_colours = ['LIGHTBROWN', 'BROWN', 'DARKBROWN']
-colour_categories = [ginger_colours, black_colours, white_colours, brown_colours]
+ginger_colours = ['PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM', 'IVORY', 'SAND', 'SUNBURST', 'BONE', 'LEMON']
+black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK','DARKBLUE', 'SOOT']
+white_colours = ['WHITE', 'PALEGREY', 'SILVER', 'WHITETWO', 'CLOUD', 'BLUE', 'HAZE']
+brown_colours = ['LIGHTBROWN', 'BROWN', 'DARKBROWN', 'SAND', 'COFFEE', 'MARSH', 'OAK']
+red_colours = ['RUSSET', 'RUBY', 'PEACH', 'SCARLET']
+colour_categories = [ginger_colours, black_colours, white_colours, brown_colours, red_colours]
 eye_sprites = [
     'YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'BLUEYELLOW', 'BLUEGREEN',
     'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT',
@@ -344,6 +623,9 @@ white_sprites = [
 
 skin_sprites = ['BLACK', 'RED', 'PINK', 'DARKBROWN', 'BROWN', 'LIGHTBROWN', 'DARK', 'DARKGREY', 'GREY', 'DARKSALMON',
                 'SALMON', 'PEACH', 'DARKMARBLED', 'MARBLED', 'LIGHTMARBLED', 'DARKBLUE', 'BLUE', 'LIGHTBLUE']
+manes = ['BLACKMANE', 'REDMANE', 'PINKMANE', 'DARKBROWNMANE', 'BROWNMANE', 'LIGHTBROWNMANE',
+         'DARKMANE', 'DARKGREYMANE', 'GREYMANE', 'COCOMANE', 'WHEATMANE', 'CREAMMANE',
+         'DARKMARBLEDMANE', 'MARBLEDMANE', 'LIGHTMARBLEDMANE', 'DARKBLUEMANE', 'BLUEMANE', 'LIGHTBLUEMANE']
 
 
 # CHOOSING PELT
@@ -463,6 +745,134 @@ def choose_pelt(colour=None, white=None, pelt=None, length=None, category=None, 
             return Singlestripe(choice(pelt_colours), white, length)
         else:
             return Singlestripe(colour, white, length)
+    elif pelt == 'Freckled':
+        if colour is None and white is None:
+            return Freckled(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Freckled(choice(pelt_colours), white, length)
+        else:
+            return Freckled(colour, white, length)
+    elif pelt == 'Mosaic':
+        if colour is None and white is None:
+            return Mosaic(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Mosaic(choice(pelt_colours), white, length)
+        else:
+            return Mosaic(colour, white, length)
+    elif pelt == 'Lynx':
+        if colour is None and white is None:
+            return Lynx(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Lynx(choice(pelt_colours), white, length)
+        else:
+            return Lynx(colour, white, length)
+    elif pelt == 'Moro':
+        if colour is None and white is None:
+            return Moro(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Moro(choice(pelt_colours), white, length)
+        else:
+            return Moro(colour, white, length)
+    elif pelt == 'Morotabby':
+        if colour is None and white is None:
+            return Morotabby(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Morotabby(choice(pelt_colours), white, length)
+        else:
+            return Morotabby(colour, white, length)
+    elif pelt == 'Pointed':
+        if colour is None and white is None:
+            return Pointed(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Pointed(choice(pelt_colours), white, length)
+        else:
+            return Pointed(colour, white, length)
+    elif pelt == 'Abyssinian':
+        if colour is None and white is None:
+            return Abyssinian(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Abyssinian(choice(pelt_colours), white, length)
+        else:
+            return Abyssinian(colour, white, length)
+    elif pelt == 'Clouded':
+        if colour is None and white is None:
+            return Clouded(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Clouded(choice(pelt_colours), white, length)
+        else:
+            return Clouded(colour, white, length)
+    elif pelt == 'Doberman':
+        if colour is None and white is None:
+            return Doberman(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Doberman(choice(pelt_colours), white, length)
+        else:
+            return Doberman(colour, white, length)
+    elif pelt == 'Ghost':
+        if colour is None and white is None:
+            return Ghost(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Ghost(choice(pelt_colours), white, length)
+        else:
+            return Ghost(colour, white, length)
+    elif pelt == 'Merle':
+        if colour is None and white is None:
+            return Merle(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Merle(choice(pelt_colours), white, length)
+        else:
+            return Merle(colour, white, length)
+    elif pelt == 'Monarch':
+        if colour is None and white is None:
+            return Monarch(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Monarch(choice(pelt_colours), white, length)
+        else:
+            return Monarch(colour, white, length)
+    elif pelt == 'Oceloid':
+        if colour is None and white is None:
+            return Oceloid(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Oceloid(choice(pelt_colours), white, length)
+        else:
+            return Oceloid(colour, white, length)
+    elif pelt == 'Pinstripe':
+        if colour is None and white is None:
+            return Pinstripe(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Pinstripe(choice(pelt_colours), white, length)
+        else:
+            return Pinstripe(colour, white, length)
+    elif pelt == 'Snowflake':
+        if colour is None and white is None:
+            return Snowflake(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Snowflake(choice(pelt_colours), white, length)
+        else:
+            return Snowflake(colour, white, length)
+    elif pelt == 'Ghostsmoke':
+        if colour is None and white is None:
+            return Ghostsmoke(choice(pelt_colours), choice([False, True]),
+                                length)
+        elif colour is None:
+            return Ghostsmoke(choice(pelt_colours), white, length)
+        else:
+            return Ghostsmoke(colour, white, length)
     elif pelt == 'Tortie':
         if white is None:
             return Tortie(colour, choice([False, True]), length)
@@ -482,7 +892,25 @@ def describe_appearance(cat, short=False):
             "darkginger": "ginger",
             "lightbrown": "brown",
             "darkbrown": "brown",
-            "ghost": "black"
+            "ghost": "black",
+            "white2": "white",
+            "cloud": "gray",
+            "blue": "blue",
+            "haze": "gray",
+            "darkblue": "blue",
+            "soot": "gray",
+            "ivory": "cream",
+            "sand": "brown",
+            "sunburst": "orange",
+            "russet": "red",
+            "bone": "cream",
+            "lemon": "yellow",
+            "coffee": "brown",
+            "marsh": "brown",
+            "oak": "brown",
+            "ruby": "red",
+            "peach": "red",
+            "scarlet": "red"
         }
     else:
         renamed_colors = {
@@ -492,7 +920,25 @@ def describe_appearance(cat, short=False):
             "darkginger": "dark ginger",
             "lightbrown": "light brown",
             "darkbrown": "dark brown",
-            "ghost": "black"
+            "ghost": "black",
+            "white2": "white",
+            "cloud": "pale gray",
+            "blue": "blue",
+            "haze": "gray",
+            "darkblue": "dark blue",
+            "soot": "dark gray",
+            "ivory": "brownish cream",
+            "sand": "sandy brown",
+            "sunburst": "bright orange",
+            "russet": "russet",
+            "bone": "brownish cream",
+            "lemon": "yellow",
+            "coffee": "brown",
+            "marsh": "brown",
+            "oak": "russet brown",
+            "ruby": "dark red",
+            "peach": "pale red",
+            "scarlet": "bright red"
         }
 
     pattern_des = {
@@ -507,7 +953,22 @@ def describe_appearance(cat, short=False):
         "Agouti": "c_n tabby",
         "Singlestripe": "dorsal-striped c_n",
         "Rosette": "unusually spotted c_n",
-        "Sokoke": "c_n tabby"
+        "Sokoke": "c_n tabby",
+        "Freckled": "unusually dappled c_n",
+        "Mosaic": "unusually caped c_n",
+        "Lynx": "unusually flecked c_n",
+        "Moro": "unusually brindled c_n",
+        "Morotabby": "unusually brindled c_n tabby",
+        "Pointed": "c_n pointed",
+        "Abyssinian": "exotic c_n",
+        "Clouded": "c_n tabby",
+        "Doberman": "dog-looking c_n",
+        "Ghost": "faintly striped c_n",
+        "Merle": "unusually patched c_n",
+        "Monarch": "unusually striped c_n tabby",
+        "Oceloid": "unusually spotted c_n",
+        "Snowflake": "unusually dotted c_n",
+        "Ghostsmoke": "unusual c_n smoke"
     }
 
     # Start with determining the base color name. 
@@ -534,7 +995,7 @@ def describe_appearance(cat, short=False):
                 color_name = cat.pelt.name.lower()
         else:
             base = cat.tortiebase.lower()
-            if base in tabbies + ['bengal', 'rosette', 'speckled']:
+            if base in tabbies + ['bengal', 'rosette', 'speckled', 'oceloid', 'monarch', 'pinstripe']:
                 base = 'tabby'
             else:
                 base = ''

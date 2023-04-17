@@ -14,6 +14,7 @@ from .pelts import (
     green_eyes,
     high_white,
     little_white,
+    manes,
     mid_white,
     mostly_white,
     pelt_categories,
@@ -21,6 +22,7 @@ from .pelts import (
     plain,
     plant_accessories,
     point_markings,
+    red_colours,
     scars1,
     scars3,
     skin_sprites,
@@ -199,28 +201,30 @@ def pelt_inheritance(cat, parents: tuple):
     # ------------------------------------------------------------------------------------------------------------#
     #   PELT COLOUR
     # ------------------------------------------------------------------------------------------------------------#
-    # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-    weights = [0, 0, 0, 0]
+    # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours, red_colours)
+    weights = [0, 0, 0, 0, 0]
     for p_ in par_peltcolours:
         if p_ in ginger_colours:
-            add_weight = (40, 0, 0, 10)
+            add_weight = (40, 0, 0, 2, 5)
         elif p_ in black_colours:
-            add_weight = (0, 40, 2, 5)
+            add_weight = (0, 40, 2, 5, 0)
         elif p_ in white_colours:
-            add_weight = (0, 5, 40, 0)
+            add_weight = (0, 5, 40, 0, 0)
         elif p_ in brown_colours:
-            add_weight = (10, 5, 0, 35)
+            add_weight = (5, 5, 0, 35, 5)
+        elif p_ in red_colours:
+            add_weight = (10, 0, 0, 2, 35)
         elif p_ is None:
-            add_weight = (40, 40, 40, 40)
+            add_weight = (40, 40, 40, 40, 40)
         else:
-            add_weight = (0, 0, 0, 0)
+            add_weight = (0, 0, 0, 0, 0)
 
         for x in range(0, len(weights)):
             weights[x] += add_weight[x]
 
         # A quick check to make sure all the weights aren't 0
         if all([x == 0 for x in weights]):
-            weights = [1, 1, 1, 1]
+            weights = [1, 1, 1, 1, 1]
 
     chosen_pelt_color = choice(
         random.choices(colour_categories, weights=weights, k=1)[0]
@@ -363,7 +367,12 @@ def init_pelt(cat):
             pelt_inheritance(cat, (par1, par2))
         else:
             randomize_pelt(cat)
-
+            
+    if cat.pelt.name in ['Abyssinian', 'Pinstripe', 'Merle', 'Ghost', 'Snowflake', 'Clouded', 'Pointed', 'Doberman', 'Oceloid', 'Monarch', 'Freckled', 'Mosaic', 'Lynx', 'Moro', 'Morotabby', 'Ghostsmoke']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "CREAM", "LIGHTBROWN", "BROWN", "DARKBROWN", "BLACK"])
+    if cat.pelt.name in ['Single', 'Tabby', 'Speckled', 'Bengal', 'Marbled', 'Rosette', 'Ticked', 'Mackerel', 'Smoke', 'Classic', 'Agouti', 'Singlestripe', 'Sokoke']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM", "BLACK",
+                                     "WHITETWO", "CLOUD", "BLUE", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET"])
 
 def init_sprite(cat):
     if cat.pelt is None:
@@ -378,7 +387,11 @@ def init_sprite(cat):
     }
     cat.reverse = choice([True, False])
     # skin chances
-    cat.skin = choice(skin_sprites)
+    chance = randint(1, 50)
+    if chance == 1:
+        cat.skin = choice(manes)
+    else:
+        cat.skin = choice(skin_sprites)
             
     if cat.pelt is not None:
         if cat.pelt.length != 'long':
@@ -433,6 +446,12 @@ def init_pattern(cat):
             cat.tortiebase = choice(tortiebases)
         if not cat.pattern:
             cat.pattern = choice(tortiepatterns)
+        
+        if cat.tortiebase in ['abyssinian', 'pinstripe', 'merle', 'ghost', 'snowflake', 'clouded', 'pointed', 'doberman', 'oceloid', 'monarch', 'freckled', 'mosaic', 'lynx', 'moro', 'morotabby', 'ghostsmoke']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "CREAM", "LIGHTBROWN", "BROWN", "DARKBROWN", "BLACK"])
+        if cat.tortiebase in ['single', 'tabby', 'speckled', 'bengal', 'marbled', 'rosette', 'ticked', 'mackerel', 'smoke', 'classic', 'agouti', 'singlestripe', 'sokoke']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM", "BLACK",
+                                      "WHITETWO", "CLOUD", "BLUE", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET"])
 
         wildcard_chance = game.config["cat_generation"]["wildcard_tortie"]
         if cat.pelt.colour:
@@ -448,12 +467,19 @@ def init_pattern(cat):
                 possible_colors = pelt_colours.copy()
                 possible_colors.remove(cat.pelt.colour)
                 cat.tortiecolour = choice(possible_colors)
+                if cat.tortiepattern in ['abyssinian', 'pinstripe', 'merle', 'ghost', 'snowflake', 'clouded', 'pointed', 'doberman', 'oceloid', 'monarch', 'freckled', 'mosaic', 'lynx', 'moro', 'morotabby',
+                                         'ghostsmoke']:
+                    cat.tortiecolour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "CREAM", "LIGHTBROWN", "BROWN", "DARKBROWN", "BLACK"])
+                if cat.tortiepattern in ['single', 'tabby', 'speckled', 'bengal', 'marbled', 'rosette', 'ticked', 'mackerel', 'smoke', 'classic', 'agouti', 'singlestripe', 'sokoke']:
+                    cat.tortiecolour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM", "BLACK",
+                                      "WHITETWO", "CLOUD", "BLUE", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET"])
 
             else:
                 # Normal generation
                 if cat.tortiebase in ["singlestripe", "smoke", "single"]:
                     cat.tortiepattern = choice(['tabby', 'mackerel', 'classic', 'single', 'smoke', 'agouti',
-                                                'ticked'])
+                                                'ticked', 'freckled', 'mosaic', 'moro', 'morotabby', 'lynx', 'pointed', 'abyssinian', 'clouded', 'doberman', 'ghost',
+                                                'merle', 'monarch', 'oceloid', 'pinstripe', 'snowflake', 'ghostsmoke'])
                 else:
                     cat.tortiepattern = random.choices([cat.tortiebase, 'single'], weights=[97, 3], k=1)[0]
 
@@ -461,11 +487,19 @@ def init_pattern(cat):
                     possible_colors = white_colours.copy()
                     possible_colors.remove("WHITE")
                     cat.pelt.colour = choice(possible_colors)
+                    if cat.tortiepattern in ['abyssinian', 'pinstripe', 'merle', 'ghost', 'snowflake', 'clouded', 'pointed', 'doberman', 'oceloid', 'monarch', 'freckled', 'mosaic', 'lynx', 'moro', 'morotabby']:
+                        cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "CREAM", "LIGHTBROWN", "BROWN", "DARKBROWN", "BLACK"])
+                    if cat.tortiepattern in ['single', 'tabby', 'speckled', 'bengal', 'marbled', 'rosette', 'ticked', 'mackerel', 'smoke', 'classic', 'agouti', 'singlestripe', 'sokoke']:
+                        cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM", "BLACK",
+                                      "WHITETWO", "CLOUD", "BLUE", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET"])
+                
 
                 # Ginger is often duplicated to increase its chances
                 if (cat.pelt.colour in black_colours) or (cat.pelt.colour in white_colours):
                     cat.tortiecolour = choice((ginger_colours * 2) + brown_colours)
                 elif cat.pelt.colour in ginger_colours:
+                    cat.tortiecolour = choice(brown_colours + black_colours * 2)
+                elif cat.pelt.colour in red_colours:
                     cat.tortiecolour = choice(brown_colours + black_colours * 2)
                 elif cat.pelt.colour in brown_colours:
                     possible_colors = brown_colours.copy()
@@ -474,6 +508,11 @@ def init_pattern(cat):
                     cat.tortiecolour = choice(possible_colors)
                 else:
                     cat.tortiecolour = "GOLDEN"
+                if cat.tortiepattern in ['abyssinian', 'pinstripe', 'merle', 'ghost', 'snowflake', 'clouded', 'pointed', 'doberman', 'oceloid', 'monarch', 'freckled', 'mosaic', 'lynx', 'moro', 'morotabby', 'ghostsmoke']:
+                    cat.tortiecolour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "CREAM", "LIGHTBROWN", "BROWN", "DARKBROWN", "BLACK"])
+                if cat.tortiepattern in ['single', 'tabby', 'speckled', 'bengal', 'marbled', 'rosette', 'ticked', 'mackerel', 'smoke', 'classic', 'agouti', 'singlestripe', 'sokoke']:
+                    cat.tortiecolour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "GHOST", "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN", "BROWN", "DARKBROWN", "CREAM", "BLACK",
+                                      "WHITETWO", "CLOUD", "BLUE", "HAZE", "DARKBLUE", "SOOT", "IVORY", "SAND", "SUNBURST", "RUSSET", "BONE", "LEMON", "COFFEE", "MARSH", "OAK", "RUBY", "PEACH", "SCARLET"])
 
         else:
             cat.tortiecolour = "GOLDEN"

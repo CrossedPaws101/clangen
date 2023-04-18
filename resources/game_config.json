@@ -169,7 +169,7 @@
 		"random_point_chance": 6
 	},
 	"accessory_generation": {
-		"base_acc_chance": 150,
+		"base_acc_chance": 100,
 		"med_modifier": -80,
 		"baby_modifier": -20,
 		"elder_modifier": 20,
@@ -241,7 +241,7 @@
 		"permanent_condition_chance": 20
 	},
 	"clan_creation": {
-		"rerolls": 3,
+		"rerolls": -1,
 		"comment": "Set this to -1 for it to be infinite"
 	},
 	"graduation": {

@@ -505,27 +505,31 @@ class Pelt:
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
         # Weights for each colour group. It goes: (ginger_colours, black_colours, white_colours, brown_colours)
-        weights = [0, 0, 0, 0]
+        weights = [0, 0, 0, 0, 0, 0]
         for p_ in par_peltcolours:
             if p_ in Pelt.ginger_colours:
-                add_weight = (40, 0, 0, 10)
+                add_weight = (40, 0, 0, 2, 5, 5)
             elif p_ in Pelt.black_colours:
-                add_weight = (0, 40, 2, 5)
+                add_weight = (0, 40, 2, 5, 0, 2)
             elif p_ in Pelt.white_colours:
-                add_weight = (0, 5, 40, 0)
+                add_weight = (0, 5, 40, 0, 0, 0)
             elif p_ in Pelt.brown_colours:
-                add_weight = (10, 5, 0, 35)
+                add_weight = (5, 5, 0, 35, 0, 5)
+            elif p_ in Pelt.cream_colours:
+                add_weight = (5, 0, 2, 2, 35, 2)
+            elif p_ in Pelt.red_colours:
+                add_weight = (10, 0, 0, 2, 2, 35)
             elif p_ is None:
-                add_weight = (40, 40, 40, 40)
+                add_weight = (40, 40, 40, 40, 40, 40)
             else:
-                add_weight = (0, 0, 0, 0)
+                add_weight = (0, 0, 0, 0, 0, 0)
 
             for x in range(0, len(weights)):
                 weights[x] += add_weight[x]
 
             # A quick check to make sure all the weights aren't 0
             if all([x == 0 for x in weights]):
-                weights = [1, 1, 1, 1]
+                weights = [1, 1, 1, 1, 1, 1]
         
         if chosen_pelt == "Masked":
             chosen_pelt_color = choice([

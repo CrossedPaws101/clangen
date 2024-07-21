@@ -54,7 +54,12 @@
     "Singlestripe": ["stripe", "streak", "back", "shade", "stem", "shadow"],
     "Masked": ["stripe", "mask", "mask", "shade"],
     "Tortie": ["dapple", "speckle", "spot", "dapple"],
-    "Calico": ["stripe", "dapple", "patch", "patch"]
+    "Calico": ["stripe", "dapple", "patch", "patch"],
+    "Abyssinian": ["fade", "dusk", "dawn", "smoke"],
+    "Clouded": ["stripe", "feather", "leaf", "stripe", "fern"],
+    "Doberman": ["patch", "spot", "splash", "patch", "spots", "bark", "hound"],
+    "Merle": ["stripe", "feather", "leaf", "stripe", "fern"],
+    "Snowflake": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"]
   },
   "tortie_pelt_suffixes": {
     "single": ["dapple", "speckle", "spots", "splash"],
@@ -70,7 +75,12 @@
     "sokoke": ["stripe", "feather", "fern", "shade", "dapple"],
     "agouti": ["back", "pelt", "fur", "dapple", "splash"],
     "singlestripe": ["stripe", "back", "shade", "stem", "dapple"],
-    "masked": ["stripe", "dapple", "mask", "mask", "shade"]
+    "masked": ["stripe", "dapple", "mask", "mask", "shade"],
+    "abyssinian": ["fade", "dusk", "dawn", "smoke"],
+    "clouded": ["stripe", "feather", "fern", "shade", "dapple"],
+    "doberman": ["dapple", "speckle", "spots", "splash"],
+    "merle": ["stripe", "feather", "fern", "shade", "dapple"],
+    "snowflake": ["dapple", "speckle", "spot", "speck", "freckle"]
   },
 
   "normal_prefixes": [

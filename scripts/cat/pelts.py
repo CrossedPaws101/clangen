@@ -31,17 +31,55 @@ class Pelt:
     pelt_colours = [
         'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
         'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
+        'CHOCOLATE',
+        # era
+        'PALE', 'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SMOG',
+        'TAN', 'SAND', 'SUNBURST', 'RUSSET', 'BONE', 'LEMON',
+        'COFFEE', 'MARSH', 'OAK', 'RUBY', 'PEACH', 'SCARLET',
+        # doe
+        'ICE', 'SKY', 'SLATE', 'ASHBROWN', 'STORM', 'CLAY', 'UMBER',
+        'SHELL', 'SALMON', 'BUTTERSCOTCH', 'TANGERINE', 'CHILI', 'TOFFEE',
+        'FAWN', 'TAUPE', 'CAMEL', 'PEANUT', 'MOLE', 'WALNUT'
+    ]
+    
+    default_colors = [
+        'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
+        'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
         'CHOCOLATE'
     ]
+    era_colors = ['PALE', 'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SMOG',
+        'TAN', 'SAND', 'SUNBURST', 'RUSSET', 'BONE', 'LEMON',
+        'COFFEE', 'MARSH', 'OAK', 'RUBY', 'PEACH', 'SCARLET']
+    doe_colors = ['ICE', 'SKY', 'SLATE', 'ASHBROWN', 'STORM', 'CLAY', 'UMBER',
+        'SHELL', 'SALMON', 'BUTTERSCOTCH', 'TANGERINE', 'CHILI', 'TOFFEE',
+        'FAWN', 'TAUPE', 'CAMEL', 'PEANUT', 'MOLE', 'WALNUT']
+    
     pelt_c_no_white = [
         'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
         'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'CHOCOLATE',
+        # era
+        'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SMOG',
+        'TAN', 'SAND', 'SUNBURST', 'RUSSET', 'BONE', 'LEMON',
+        'COFFEE', 'MARSH', 'OAK', 'RUBY', 'PEACH', 'SCARLET',
+        # doe
+        'ICE', 'SKY', 'SLATE', 'ASHBROWN', 'STORM', 'CLAY', 'UMBER',
+        'SHELL', 'SALMON', 'BUTTERSCOTCH', 'TANGERINE', 'CHILI', 'TOFFEE',
+        'FAWN', 'TAUPE', 'CAMEL', 'PEANUT', 'MOLE', 'WALNUT'
+
     ]
     pelt_c_no_bw = [
         'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'CREAM', 'PALEGINGER',
         'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'CHOCOLATE',
+        # era
+        'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE',
+        'TAN', 'SAND', 'SUNBURST', 'RUSSET', 'BONE', 'LEMON',
+        'COFFEE', 'MARSH', 'OAK', 'RUBY', 'PEACH', 'SCARLET',
+        # doe
+        'ICE', 'SKY', 'SLATE', 'ASHBROWN', 'STORM', 'CLAY', 'UMBER',
+        'SHELL', 'SALMON', 'BUTTERSCOTCH', 'TANGERINE', 'CHILI', 'TOFFEE',
+        'FAWN', 'TAUPE', 'CAMEL', 'PEANUT', 'MOLE', 'WALNUT'
     ]
 
     tortiepatterns = ['ONE', 'TWO', 'THREE', 'FOUR', 'REDTAIL', 'DELILAH', 'MINIMALONE', 'MINIMALTWO', 'MINIMALTHREE',
@@ -108,13 +146,25 @@ class Pelt:
     single_colours = [
         'WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST', 'BLACK', 'CREAM', 'PALEGINGER',
         'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN',
-        'CHOCOLATE'
+        'CHOCOLATE',
+        # era
+        'PALE', 'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SMOG',
+        'TAN', 'SAND', 'SUNBURST', 'RUSSET', 'BONE', 'LEMON',
+        'COFFEE', 'MARSH', 'OAK', 'RUBY', 'PEACH', 'SCARLET',
+        # doe
+        'ICE', 'SKY', 'SLATE', 'ASHBROWN', 'STORM', 'CLAY', 'UMBER',
+        'SHELL', 'SALMON', 'BUTTERSCOTCH', 'TANGERINE', 'CHILI', 'TOFFEE',
+        'FAWN', 'TAUPE', 'CAMEL', 'PEANUT', 'MOLE', 'WALNUT'
     ]
-    ginger_colours = ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA']
-    black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK']
-    white_colours = ['WHITE', 'PALEGREY', 'SILVER']
-    brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
-    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours]
+    ginger_colours = ['PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA', 'SUNBURST', 'TANGERINE', 'CHILI', 'TOFFEE']
+    black_colours = ['GREY', 'DARKGREY', 'GHOST', 'BLACK', 'DARKBLUE', 'SMOG', 'SLATE']
+    white_colours = ['WHITE', 'PALEGREY', 'SILVER', 'PALE', 'CLOUD', 'BLUE', 'HAZE', 'ICE', 'SKY', 'STORM']
+    brown_colours = ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE',
+                     'COFFEE', 'MARSH', 'ASHBROWN', 'CLAY', 'TAUPE', 'UMBER', 'CAMEL', 'PEANUT',
+                     'MOLE', 'WALNUT']
+    cream_colours = ['CREAM', 'TAN', 'SAND', 'BONE', 'LEMON', 'SHELL', 'BUTTERSCOTCH', 'FAWN']
+    red_colours = ['SIENNA', 'RUSSET', 'OAK', 'RUBY', 'PEACH', 'SCARLET', 'SALMON']
+    colour_categories = [ginger_colours, black_colours, white_colours, brown_colours, cream_colours, red_colours]
     eye_sprites = [
         'YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'BLUEYELLOW', 'BLUEGREEN',
         'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT',
@@ -476,10 +526,16 @@ class Pelt:
             # A quick check to make sure all the weights aren't 0
             if all([x == 0 for x in weights]):
                 weights = [1, 1, 1, 1]
-
-        chosen_pelt_color = choice(
-            random.choices(Pelt.colour_categories, weights=weights, k=1)[0]
-        )
+        
+        if chosen_pelt == "Masked":
+            chosen_pelt_color = choice([
+                random.choice(Pelt.default_colors),
+                random.choice(Pelt.era_colors)
+            ])
+        else:
+            chosen_pelt_color = choice(
+                random.choices(Pelt.colour_categories, weights=weights, k=1)[0]
+            )
 
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT LENGTH
@@ -571,9 +627,15 @@ class Pelt:
         #   PELT COLOUR
         # ------------------------------------------------------------------------------------------------------------#
 
-        chosen_pelt_color = choice(
-            random.choices(Pelt.colour_categories, k=1)[0]
-        )
+        if chosen_pelt == "Masked":
+            chosen_pelt_color = choice([
+                random.choice(Pelt.default_colors),
+                random.choice(Pelt.era_colors)
+            ])
+        else:
+            chosen_pelt_color = choice(
+                random.choices(Pelt.colour_categories, k=1)[0]
+            )
 
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT LENGTH
@@ -699,9 +761,15 @@ class Pelt:
                     self.tortiepattern = choice(Pelt.tortiebases)
 
                     # Allow any colors that aren't the base color.
-                    possible_colors = Pelt.pelt_colours.copy()
-                    possible_colors.remove(self.colour)
-                    self.tortiecolour = choice(possible_colors)
+                    if self.tortiepattern == 'masked':
+                        possible_colors = Pelt.default_colors.copy()
+                        possible_colors.extend(Pelt.era_colors)
+                        possible_colors.remove(self.colour)
+                        self.tortiecolour = choice(possible_colors)
+                    else:
+                        possible_colors = Pelt.pelt_colours.copy()
+                        possible_colors.remove(self.colour)
+                        self.tortiecolour = choice(possible_colors)
 
                 else:
                     # Normal generation
@@ -711,24 +779,35 @@ class Pelt:
                     else:
                         self.tortiepattern = random.choices([self.tortiebase, 'single'], weights=[97, 3], k=1)[0]
 
-                    if self.colour == "WHITE":
+                    if self.colour == "WHITE" or "PALE" or "ICE":
                         possible_colors = Pelt.white_colours.copy()
                         possible_colors.remove("WHITE")
+                        possible_colors.remove("PALE")
+                        possible_colors.remove("ICE")
+                        if self.tortiepattern == 'masked':
+                            possible_colors.remove("SKY")
+                            possible_colors.remove("STORM")
                         self.colour = choice(possible_colors)
 
                     # Ginger is often duplicated to increase its chances
                     if (self.colour in Pelt.black_colours) or (self.colour in Pelt.white_colours):
-                        self.tortiecolour = choice((Pelt.ginger_colours * 2) + Pelt.brown_colours)
+                        self.tortiecolour = choice((Pelt.ginger_colours * 2) + Pelt.red_colours + Pelt.cream_colours + Pelt.brown_colours)
                     elif self.colour in Pelt.ginger_colours:
                         self.tortiecolour = choice(Pelt.brown_colours + Pelt.black_colours * 2)
                     elif self.colour in Pelt.brown_colours:
                         possible_colors = Pelt.brown_colours.copy()
                         possible_colors.remove(self.colour)
-                        possible_colors.extend(Pelt.black_colours + (Pelt.ginger_colours * 2))
+                        possible_colors.extend(Pelt.black_colours + (Pelt.ginger_colours * 2) + (Pelt.cream_colours * 2) + Pelt.red_colours)
                         self.tortiecolour = choice(possible_colors)
                     else:
                         self.tortiecolour = "GOLDEN"
-
+                    
+                    if self.tortiepattern == 'masked':
+                        possible_colors = Pelt.default_colors.copy()
+                        possible_colors.extend(Pelt.era_colors)
+                        if self.colour in possible_colors:
+                            possible_colors.remove(self.colour)
+                        self.tortiecolour = choice(possible_colors)
             else:
                 self.tortiecolour = "GOLDEN"
         else:
@@ -955,7 +1034,44 @@ class Pelt:
                 "golden-brown": "brown",
                 "darkbrown": "brown",
                 "chocolate": "brown",
-                "ghost": "black"
+                "ghost": "black",
+                "pale": "pale",
+                "cloud": "gray",
+                "blue": "blue",
+                "haze": "gray",
+                "darkblue": "blue",
+                "smog": "gray",
+                "tan": "cream",
+                "sand": "brown",
+                "sunburst": "ginger",
+                "russet": "ginger",
+                "bone": "cream",
+                "lemon": "yellow",
+                "coffee": "brown",
+                "marsh": "brown",
+                "oak": "brown",
+                "ruby": "red",
+                "peach": "red",
+                "scarlet": "red",
+                "icy": "gray",
+                "sky": "gray",
+                "slate": "silver",
+                "ashbrown": "brown",
+                "storm": "blue",
+                "clay": "brown",
+                "umber": "brown",
+                "shell": "cream",
+                "salmon": "ginger",
+                "butterscotch": "golden",
+                "tangerine": "ginger",
+                "chili": "ginger",
+                "toffee": "ginger",
+                "fawn": "cream",
+                "taupe": "brown",
+                "camel": "brown",
+                "peanut": "brown",
+                "mole": "brown",
+                "walnut": "brown",
             }
         else:
             renamed_colors = {
@@ -971,7 +1087,44 @@ class Pelt:
                 "golden-brown": "golden brown",
                 "darkbrown": "dark brown",
                 "chocolate": "dark brown",
-                "ghost": "black"
+                "ghost": "black",
+                "pale": "pale gray",
+                "cloud": "gray",
+                "blue": "blue",
+                "haze": "gray",
+                "darkblue": "dark blue",
+                "smog": "dark gray",
+                "tan": "tan",
+                "sand": "light brown",
+                "sunburst": "ginger",
+                "russet": "dark ginger",
+                "bone": "beige",
+                "lemon": "yellow",
+                "coffee": "brown",
+                "marsh": "brown",
+                "oak": "reddish-brown",
+                "ruby": "red",
+                "peach": "pale red",
+                "scarlet": "bright red",
+                "icy": "pale gray",
+                "sky": "pale gray",
+                "slate": "silver",
+                "ashbrown": "gray-brown",
+                "storm": "blue",
+                "clay": "dark brown",
+                "umber": "dark brown",
+                "shell": "cream",
+                "salmon": "pale ginger",
+                "butterscotch": "golden",
+                "tangerine": "ginger",
+                "chili": "dark ginger",
+                "toffee": "ginger",
+                "fawn": "cream",
+                "taupe": "lilac",
+                "camel": "brown",
+                "peanut": "brown",
+                "mole": "dark brown",
+                "walnut": "dark brown",
             }
 
         pattern_des = {
@@ -987,7 +1140,8 @@ class Pelt:
             "Singlestripe": "dorsal-striped c_n",
             "Rosette": "unusually spotted c_n",
             "Sokoke": "c_n tabby",
-            "Masked": "masked c_n tabby"
+            "Masked": "masked c_n tabby",
+            "Abyssinian": "c_n abyssinian"
         }
 
         # Start with determining the base color name
@@ -1001,7 +1155,10 @@ class Pelt:
 
         # Time to describe the pattern and any additional colors
         if cat.pelt.name in pattern_des:
-            color_name = pattern_des[cat.pelt.name].replace("c_n", color_name)
+            if cat.pelt.colour in Pelt.default_colors and cat.pelt.name == "Rosette":
+                color_name = pattern_des["Abyssinian"].replace("c_n", color_name)
+            else:
+                color_name = pattern_des[cat.pelt.name].replace("c_n", color_name) 
         elif cat.pelt.name in Pelt.torties:
             # Calicos and Torties need their own desciptions
             if short:

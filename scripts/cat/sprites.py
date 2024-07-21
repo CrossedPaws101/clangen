@@ -133,7 +133,13 @@ class Sprites:
             'shadersnewwhite', 'lightingnew',
             'whitepatches', 'tortiepatchesmasks',
             'fademask', 'fadestarclan', 'fadedarkforest',
-            'symbols'
+            'symbols',
+            # mod additions
+            'doeagouti', 'doebengal', 'doebraided', 'doebrokenbraided', 'doebrokenmackerel', 'doecharcoal',
+            'doeclassic', 'doemackerel', 'doemarbled', 'doerosette', 'doesingle', 'doesinglestripe', 'doesmoke', 'doesokoke',
+            'doespeckled', 'doetabby', 'doeticked', 'eraagouti', 'erabengal', 'eraclassic', 'eramackerel', 'eramasked',
+            'eramarbled', 'erarosette', 'erasingle', 'erasinglestripe', 'erasmoke', 'erasokoke', 'eraspeckled',
+            'eratabby', 'eraticked', 'shatteredpelts'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -199,6 +205,18 @@ class Sprites:
             ['CREAM', 'PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'SIENNA'],
             ['LIGHTBROWN', 'LILAC', 'BROWN', 'GOLDEN-BROWN', 'DARKBROWN', 'CHOCOLATE']
         ]
+        
+        era_colors = [
+            ['PALE', 'CLOUD', 'BLUE', 'HAZE', 'DARKBLUE', 'SMOG'],
+            ['TAN', 'SAND', 'SUNBURST', 'RUSSET', 'BONE', 'LEMON'],
+            ['COFFEE', 'MARSH', 'OAK', 'RUBY', 'PEACH', 'SCARLET']
+        ]
+        
+        doe_colors = [
+            ['ICE', 'SKY', 'SLATE', 'ASHBROWN', 'STORM', 'CLAY', 'UMBER'],
+            ['SHELL', 'SALMON', 'BUTTERSCOTCH', 'TANGERINE', 'CHILI', 'TOFFEE'],
+            ['FAWN', 'TAUPE', 'CAMEL', 'PEANUT', 'MOLE', 'WALNUT']
+        ]
 
         color_types = [
             'singlecolours', 'tabbycolours', 'marbledcolours', 'rosettecolours',
@@ -206,11 +224,44 @@ class Sprites:
             'mackerelcolours', 'classiccolours', 'sokokecolours', 'agouticolours',
             'singlestripecolours', 'maskedcolours'
         ]
+        
+        era_types = [
+            'eraagouti', 'erabengal', 'eraclassic', 'eramackerel', 'eramasked',
+            'eramarbled', 'erarosette', 'erasingle', 'erasinglestripe', 'erasmoke', 'erasokoke',
+            'eraspeckled', 'eratabby', 'eraticked'
+        ]
+        
+        doe_types = [
+            'doeagouti', 'doebengal',
+            'doeclassic', 'doemackerel', 'doemarbled', 'doerosette', 'doesingle',
+            'doesinglestripe', 'doesmoke', 'doesokoke',
+            'doespeckled', 'doetabby', 'doeticked',
+        ]
+        
+        shattered_types = [
+            'abyssinian', 'clouded', 'doberman', 'merle', 'snowflake'
+        ]
 
         for row, colors in enumerate(color_categories):
             for col, color in enumerate(colors):
                 for color_type in color_types:
                     self.make_group(color_type, (col, row), f'{color_type[:-7]}{color}')
+        x = 0
+        for i in range(5):
+            for row, colors in enumerate(color_categories):
+                for col, color in enumerate(colors):
+                    self.make_group('shatteredpelts', (col, row+x), f'{shattered_types[i]}{color}')
+            x +=3
+                    
+        for row, colors in enumerate(era_colors):
+            for col, color in enumerate(colors):
+                for era_type in era_types:
+                    self.make_group(era_type, (col, row), f'{era_type[3:]}{color}')
+        
+        for row, colors in enumerate(doe_colors):
+            for col, color in enumerate(colors):
+                for doe_type in doe_types:
+                    self.make_group(doe_type, (col, row), f'{doe_type[3:]}{color}')
 
         # tortiepatchesmasks
         tortiepatchesmasks = [

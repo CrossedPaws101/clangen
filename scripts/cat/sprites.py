@@ -198,6 +198,10 @@ class Sprites:
         for row, patches in enumerate(white_patches):
             for col, patch in enumerate(patches):
                 self.make_group('whitepatches', (col, row), f'white{patch}')
+        # making white patches into tortie masks
+        for row, masks in enumerate(white_patches):
+            for col, mask in enumerate(masks):
+                self.make_group('whitepatches', (col, row), f"tortiemask{mask}")
 
         # Define colors and categories
         color_categories = [

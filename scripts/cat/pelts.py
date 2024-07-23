@@ -471,6 +471,13 @@ class Pelt:
             self.colour = selected.colour
             self.tortiebase = selected.tortiebase
             return selected.white
+        
+        if self.name in Pelt.new_pelts:
+            self.colour = random.choice(Pelt.default_colors)
+        
+        while self.tortiebase in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake'] and self.color not in Pelt.default_colors:
+            self.tortiebase = random.choice(Pelt.tortiebases)
+        
 
         # ------------------------------------------------------------------------------------------------------------#
         #   PELT
@@ -564,10 +571,8 @@ class Pelt:
                 random.choice(Pelt.default_colors),
                 random.choice(Pelt.era_colors)
             ])
-        elif chosen_pelt in Pelt.new_pelts:
-            chosen_pelt_color = choice(
-                random.choices(Pelt.default_colors, weights=weights, k=1)[0]
-            )
+        elif chosen_pelt in ["Abyssinian", "Clouded", "Doberman", "Merle", "Snowflake"]:
+            chosen_pelt_color = random.choice(Pelt.default_colors)
         else:
             chosen_pelt_color = choice(
                 random.choices(Pelt.colour_categories, weights=weights, k=1)[0]
@@ -668,7 +673,7 @@ class Pelt:
                 random.choice(Pelt.default_colors),
                 random.choice(Pelt.era_colors)
             ])
-        elif chosen_pelt in Pelt.new_pelts:
+        elif chosen_pelt in ["Abyssinian", "Clouded", "Doberman", "Merle", "Snowflake"]:
             chosen_pelt_color = random.choice(Pelt.default_colors)
         else:
             chosen_pelt_color = choice(
@@ -839,7 +844,6 @@ class Pelt:
                             possible_colors.remove("HAZE")
                             possible_colors.remove("SKY")
                             possible_colors.remove("STORM")
-                            self.colour = choice(possible_colors)
                         self.colour = choice(possible_colors)
 
                     # Ginger is often duplicated to increase its chances

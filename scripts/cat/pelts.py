@@ -229,12 +229,12 @@ class Pelt:
                  name: str = "SingleColour",
                  length: str = "short",
                  colour: str = "WHITE",
-                 white_patches: list = None,
+                 white_patches: str = None,
                  eye_color: str = "BLUE",
                  eye_colour2: str = None,
                  tortiebase: str = None,
                  tortiecolour: str = None,
-                 pattern: list = None,
+                 pattern: str = None,
                  tortiepattern: str = None,
                  vitiligo: str = None,
                  points: str = None,
@@ -398,10 +398,12 @@ class Pelt:
 
         # White patches must be initalized before eye color.
         num = game.config["cat_generation"]["base_heterochromia"]
-        if self.white_patches:
-            if any(white in [Pelt.high_white, Pelt.mostly_white, 'FULLWHITE'] for white in self.white_patches) or self.colour == 'WHITE':
-                num = num - 90
-            if any(white in 'FULLWHITE' for white in self.white_patches) or self.colour == 'WHITE':
+        if self.white_patches in [Pelt.high_white, Pelt.mostly_white, 'FULLWHITE'] or self.colour == 'WHITE':
+            num = num - 90
+        if self.white_patches == 'FULLWHITE' or self.colour == 'WHITE':
+            num -= 10
+        for _par in parents:
+            if _par.pelt.eye_colour2:
                 num -= 10
 
         if num < 0:
@@ -787,18 +789,7 @@ class Pelt:
             if not self.tortiebase:
                 self.tortiebase = choice(Pelt.tortiebases)
             if not self.pattern:
-                chosen_pattern = set()
-                chosen_pattern.add(choice(Pelt.tortiepatterns))
-
-                num = game.config["cat_generation"]["base_extra_tortie"]
-
-                for x in range(game.config["cat_generation"]["max_tortie_amount"] - 1):
-                    if not random.randint(0, num):
-
-                        chosen_pattern.add(choice(Pelt.tortiepatterns))
-                        num += 3
-
-                self.pattern = list(chosen_pattern)
+                self.pattern = choice(Pelt.tortiepatterns)
 
             wildcard_chance = game.config["cat_generation"]["wildcard_tortie"]
             if self.colour:
@@ -894,7 +885,7 @@ class Pelt:
         for p in parents:
             if p:
                 if p.pelt.white_patches:
-                    par_whitepatches.add(choice(p.pelt.white_patches))
+                    par_whitepatches.add(p.pelt.white_patches)
                 if p.pelt.points:
                     par_points.append(p.pelt.points)
 
@@ -916,19 +907,9 @@ class Pelt:
                     if p in Pelt.little_white + Pelt.mid_white:
                         _temp.remove(p)
 
-            chosen_white_patches = set()
             # Only proceed with the direct inheritance if there are white patches that match the pelt.
             if _temp:
-                chosen_white_patches.add(choice(list(_temp)))
-                for x in range(game.config["cat_generation"]["max_white_amount"] - 1):
-                    if not random.randint(0, game.config["cat_generation"]["base_extra_white"]):
-                        for p in chosen_white_patches:
-                            if p in _temp:
-                                _temp.remove(p)
-                        if _temp:
-                            chosen_white_patches.add(choice(list(_temp)))
-
-                self.white_patches = list(chosen_white_patches)
+                self.white_patches = choice(list(_temp))
 
                 # Direct inheritance also effect the point marking.
                 if par_points and self.name != "Tortie":
@@ -991,39 +972,9 @@ class Pelt:
             if not any(weights):
                 weights = [2, 1, 0, 0, 0]
 
-        chosen_white_patches = set()
-        chosen_white_patches.add(choice(
+        chosen_white_patches = choice(
             random.choices(white_list, weights=weights, k=1)[0]
-        ))
-        
-        num = game.config["cat_generation"]["base_extra_white"]
-
-        if any(white in Pelt.high_white for white in chosen_white_patches):
-            num -= 2
-        elif any(white in Pelt.little_white for white in chosen_white_patches) or any(white in Pelt.mid_white for white in chosen_white_patches):
-            num -= 5
-
-        for p in parents:
-            if p:
-                if not p.pelt.white_patches:
-                    num += 1
-                elif len(p.pelt.white_patches) >= 2:
-                    num -= 1
-
-        if num < 0:
-            num = 1
-
-        self.white_patches = chosen_white_patches
-        for x in range(game.config["cat_generation"]["max_white_amount"] - 1):
-            if not random.randint(0, num):
-
-                weights = (12, 10, 3, 0, 0)
-                chosen_white_patches.add(choice(
-                    random.choices(white_list, weights=weights, k=1)[0]
-                ))
-                num += 1
-
-        self.white_patches = list(chosen_white_patches)
+        )
 
         self.white_patches = chosen_white_patches
         if self.points and self.white_patches in [Pelt.high_white, Pelt.mostly_white, 'FULLWHITE']:
@@ -1046,33 +997,12 @@ class Pelt:
         else:
             weights = (10, 10, 10, 10, 1)
 
-        chosen_white_patches = set()
         white_list = [Pelt.little_white, Pelt.mid_white, Pelt.high_white, Pelt.mostly_white, ['FULLWHITE']]
-        chosen_white_patches.add(choice(
+        chosen_white_patches = choice(
             random.choices(white_list, weights=weights, k=1)[0]
-        ))
+        )
 
-        num = game.config["cat_generation"]["base_extra_white"]
-
-        if any(white in Pelt.high_white for white in chosen_white_patches):
-            num -= 2
-        elif any(white in Pelt.little_white for white in chosen_white_patches) or any(white in Pelt.mid_white for white in chosen_white_patches):
-            num -= 5
-
-        if num < 0:
-            num = 1
-
-        for x in range(game.config["cat_generation"]["max_white_amount"] - 1):
-            if not random.randint(0, num):
-
-                weights = (12, 10, 3, 0, 0)
-                chosen_white_patches.add(choice(
-                    random.choices(white_list, weights=weights, k=1)[0]
-                ))
-                num += 1
-
-        self.white_patches = list(chosen_white_patches)
-        
+        self.white_patches = chosen_white_patches
         if self.points and self.white_patches in [Pelt.high_white, Pelt.mostly_white, 'FULLWHITE']:
             self.points = None
 
@@ -1326,7 +1256,7 @@ class Pelt:
             if cat.pelt.white_patches == "FULLWHITE":
                 # If the cat is fullwhite, discard all other information. They are just white
                 color_name = "white"
-            if any(white in Pelt.mostly_white for white in cat.pelt.white_patches) and cat.pelt.name != "Calico":
+            if cat.pelt.white_patches in Pelt.mostly_white and cat.pelt.name != "Calico":
                 color_name = f"white and {color_name}"
             elif cat.pelt.name != "Calico":
                 color_name = f"{color_name} and white"

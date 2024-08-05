@@ -66,7 +66,11 @@
     "Smokepoint": ["fade", "dusk", "dawn", "smoke"],
     "Brindle": ["stripe", "feather", "leaf", "stripe", "fern"],
     "Finleap": ["patch", "spot", "splash", "patch", "spots", "swan"],
-    "Spots": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"]
+    "Spots": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"],
+    "Braided": ["stripe", "feather", "leaf", "stripe", "shade"],
+    "Brokenbraided": ["stripe", "feather", "leaf", "stripe", "shade", "break", "shatter"],
+    "Brokenmackerel": ["stripe", "feather", "leaf", "stripe", "fern", "break", "shatter"],
+    "Charcoal": ["dapple", "speckle", "spots", "speck", "freckle", "fleck", "mask"]
   },
 
   "tortie_pelt_suffixes": {
@@ -95,8 +99,11 @@
     "smokepoint": ["fade", "dusk", "dawn", "smoke"],
     "brindle": ["stripe", "feather", "leaf", "stripe", "fern"],
     "finleap": ["patch", "spot", "splash", "patch", "spots", "swan"],
-    "spots": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"]
-    
+    "spots": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"],
+    "braided": ["stripe", "feather", "leaf", "stripe", "shade"],
+    "brokenbraided": ["stripe", "feather", "leaf", "stripe", "shade", "break", "shatter"],
+    "brokenmackerel": ["stripe", "feather", "leaf", "stripe", "fern", "break", "shatter"],
+    "charcoal": ["dapple", "speckle", "spots", "speck", "freckle", "fleck", "mask"]
   },
 
   "normal_prefixes": [

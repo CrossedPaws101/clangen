@@ -139,7 +139,7 @@ class Sprites:
             'doeclassic', 'doemackerel', 'doemarbled', 'doerosette', 'doesingle', 'doesinglestripe', 'doesmoke', 'doesokoke',
             'doespeckled', 'doetabby', 'doeticked', 'eraagouti', 'erabengal', 'eraclassic', 'eramackerel', 'eramasked',
             'eramarbled', 'erarosette', 'erasingle', 'erasinglestripe', 'erasmoke', 'erasokoke', 'eraspeckled',
-            'eratabby', 'eraticked', 'shatteredpelts'
+            'eratabby', 'eraticked', 'shatteredpelts', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -245,11 +245,21 @@ class Sprites:
         shattered_types = [
             'abyssinian', 'clouded', 'doberman', 'merle', 'snowflake'
         ]
+        
+        era_pelts = [
+            'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle'
+        ]
 
         for row, colors in enumerate(color_categories):
             for col, color in enumerate(colors):
                 for color_type in color_types:
                     self.make_group(color_type, (col, row), f'{color_type[:-7]}{color}')
+                    
+        for row, colors in enumerate(color_categories):
+            for col, color in enumerate(colors):             
+                for era_pelt in era_pelts:
+                    self.make_group(era_pelt, (col, row), f'{era_pelt}{color}')
+                    
         x = 0
         for i in range(5):
             for row, colors in enumerate(color_categories):

@@ -23,13 +23,20 @@ class Pelt:
         'Agouti': 'agouti',
         'Singlestripe': 'singlestripe',
         'Masked': 'masked',
+        'Tortie': None,
+        'Calico': None,
         'Abyssinian': 'abyssinian',
         'Clouded': 'clouded',
         'Doberman': 'doberman',
         'Merle': 'merle',
         'Snowflake': 'snowflake',
-        'Tortie': None,
-        'Calico': None,
+        'Lynx': 'lynx',
+        'Wildcat': 'wildcat',
+        'Wolf': 'wolf',
+        'Smokepoint': 'smokepoint',
+        'Brindle': 'brindle',
+        'Finleap': 'finleap',
+        'Spots': 'spots',
     }
 
     # ATTRIBUTES, including non-pelt related
@@ -117,7 +124,7 @@ class Pelt:
                   ]
     tortiebases = ['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled', 'mackerel',
                    'classic', 'sokoke', 'agouti', 'singlestripe', 'masked', 'abyssinian', 'clouded', 'doberman',
-                   'merle', 'snowflake']
+                   'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle']
 
     pelt_length = ["short", "medium", "long"]
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
@@ -162,13 +169,14 @@ class Pelt:
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
-    spotted = ["Speckled", "Rosette"]
-    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe", "Abyssinian", "Doberman"]
-    exotic = ["Bengal", "Marbled", "Masked", "Clouded", "Merle", "Snowflake"]
+    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Wildcat"]
+    spotted = ["Speckled", "Rosette", "Spots", "Lynx"]
+    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe", "Abyssinian", "Doberman", "Finleap", "Wolf", "Smokepoint"]
+    exotic = ["Bengal", "Marbled", "Masked", "Clouded", "Merle", "Snowflake", "Brindle"]
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
-    new_pelts = ["Abyssinian", "Clouded", "Merle", "Doberman", "Snowflake"]
+    new_pelts = ["Abyssinian", "Clouded", "Merle", "Doberman", "Snowflake", "Lynx",
+                 "Wildcat", "Wolf", "Smokepoint", "Brindle", "Finleap", "Spots"]
 
     # SPRITE NAMES
     single_colours = [
@@ -475,7 +483,7 @@ class Pelt:
         if self.name in Pelt.new_pelts:
             self.colour = random.choice(Pelt.default_colors)
         
-        while self.tortiebase in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake'] and self.color not in Pelt.default_colors:
+        while self.tortiebase in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle'] and self.color not in Pelt.default_colors:
             self.tortiebase = random.choice(Pelt.tortiebases)
         
 
@@ -571,7 +579,7 @@ class Pelt:
                 random.choice(Pelt.default_colors),
                 random.choice(Pelt.era_colors)
             ])
-        elif chosen_pelt in ["Abyssinian", "Clouded", "Doberman", "Merle", "Snowflake"]:
+        elif chosen_pelt in ["Abyssinian", "Clouded", "Doberman", "Merle", "Snowflake", "Finleap", "Wolf", "Smokepoint", "Lynx", "Brindle", "Wildcat", "Spots"]:
             chosen_pelt_color = random.choice(Pelt.default_colors)
         else:
             chosen_pelt_color = choice(
@@ -673,7 +681,7 @@ class Pelt:
                 random.choice(Pelt.default_colors),
                 random.choice(Pelt.era_colors)
             ])
-        elif chosen_pelt in ["Abyssinian", "Clouded", "Doberman", "Merle", "Snowflake"]:
+        elif chosen_pelt in ["Abyssinian", "Clouded", "Doberman", "Merle", "Snowflake", "Finleap", "Wolf", "Smokepoint", "Lynx", "Brindle", "Wildcat", "Spots"]:
             chosen_pelt_color = random.choice(Pelt.default_colors)
         else:
             chosen_pelt_color = choice(
@@ -809,7 +817,7 @@ class Pelt:
                         possible_colors.extend(Pelt.era_colors)
                         possible_colors.remove(self.colour)
                         self.tortiecolour = choice(possible_colors)
-                    elif self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake']:
+                    elif self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle']:
                         possible_colors = Pelt.default_colours.copy()
                         possible_colors.remove(self.colour)
                         self.tortiecolour = choice(possible_colors)
@@ -822,11 +830,11 @@ class Pelt:
                     # Normal generation
                     if self.tortiebase in ["singlestripe", "smoke", "single"]:
                         self.tortiepattern = choice(['tabby', 'mackerel', 'classic', 'single', 'smoke', 'agouti',
-                                                     'ticked', 'abyssinian', 'clouded', 'doberman', 'merle', 'snowflake'])
+                                                     'ticked', 'abyssinian', 'clouded', 'doberman', 'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle'])
                     else:
                         self.tortiepattern = random.choices([self.tortiebase, 'single'], weights=[97, 3], k=1)[0]
 
-                    if self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake']:
+                    if self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle']:
                         possible_colors = Pelt.default_colors.copy()
                         self.colour = choice(possible_colors)
                         
@@ -838,7 +846,7 @@ class Pelt:
                         if self.tortiepattern == 'masked':
                             possible_colors.remove("SKY")
                             possible_colors.remove("STORM")
-                        if self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake']:
+                        if self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle']:
                             possible_colors.remove("CLOUD")
                             possible_colors.remove("BLUE")
                             possible_colors.remove("HAZE")
@@ -859,7 +867,7 @@ class Pelt:
                     else:
                         self.tortiecolour = "GOLDEN"
                     
-                    if self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake']:
+                    if self.tortiepattern in ['abyssinian', 'clouded', 'doberman', 'merle', 'snowflake', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle']:
                         possible_colors = Pelt.default_colors.copy()
                         if self.colour in possible_colors:
                             possible_colors.remove(self.colour)
@@ -1208,6 +1216,13 @@ class Pelt:
             "Doberman": "c_n dog-like",
             "Merle": "c_n merle",
             "Snowflake": "unusually specked c_n",
+            "Lynx": "unusually speckled c_n",
+            "Wildcat": "unusually striped c_n",
+            "Wolf": "c_n wolf-like",
+            "Smokepoint": "c_n pointed smoke",
+            "Brindle": "c_n brindled",
+            "Finleap": "c_n",
+            "Spots": "c_n spotted",
         }
 
         # Start with determining the base color name

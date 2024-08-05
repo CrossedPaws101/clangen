@@ -169,10 +169,10 @@ class Pelt:
         "BLACKNYLON", "SPIKESNYLON", "WHITENYLON", "PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON",
     ]
 
-    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti", "Wildcat"]
-    spotted = ["Speckled", "Rosette", "Spots", "Lynx"]
-    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe", "Abyssinian", "Doberman", "Finleap", "Wolf", "Smokepoint"]
-    exotic = ["Bengal", "Marbled", "Masked", "Clouded", "Merle", "Snowflake", "Brindle"]
+    tabbies = ["Tabby", "Ticked", "Mackerel", "Classic", "Sokoke", "Agouti"]
+    spotted = ["Speckled", "Rosette", "Spots"]
+    plain = ["SingleColour", "TwoColour", "Smoke", "Singlestripe", "Abyssinian", "Doberman", "Finleap", "Smokepoint"]
+    exotic = ["Bengal", "Marbled", "Masked", "Clouded", "Merle", "Snowflake", "Brindle", "Wildcat", "Wolf", "Lynx"]
     torties = ["Tortie", "Calico"]
     pelt_categories = [tabbies, spotted, plain, exotic, torties]
     new_pelts = ["Abyssinian", "Clouded", "Merle", "Doberman", "Snowflake", "Lynx",

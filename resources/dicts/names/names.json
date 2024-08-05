@@ -59,8 +59,16 @@
     "Clouded": ["stripe", "feather", "leaf", "stripe", "fern"],
     "Doberman": ["patch", "spot", "splash", "patch", "spots", "bark", "hound"],
     "Merle": ["stripe", "feather", "leaf", "stripe", "fern"],
-    "Snowflake": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"]
+    "Snowflake": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"],
+    "Lynx": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"],
+    "Wildcat": ["stripe", "feather", "leaf", "stripe", "fern"],
+    "Wolf": ["patch", "spot", "splash", "patch", "spots", "bark", "hound"],
+    "Smokepoint": ["fade", "dusk", "dawn", "smoke"],
+    "Brindle": ["stripe", "feather", "leaf", "stripe", "fern"],
+    "Finleap": ["patch", "spot", "splash", "patch", "spots", "swan"],
+    "Spots": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"]
   },
+
   "tortie_pelt_suffixes": {
     "single": ["dapple", "speckle", "spots", "splash"],
     "tabby": ["stripe", "feather", "leaf", "stripe", "shade", "fern"],
@@ -80,7 +88,15 @@
     "clouded": ["stripe", "feather", "fern", "shade", "dapple"],
     "doberman": ["dapple", "speckle", "spots", "splash"],
     "merle": ["stripe", "feather", "fern", "shade", "dapple"],
-    "snowflake": ["dapple", "speckle", "spot", "speck", "freckle"]
+    "snowflake": ["dapple", "speckle", "spot", "speck", "freckle"],
+    "lynx": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"],
+    "wildcat": ["stripe", "feather", "leaf", "stripe", "fern"],
+    "wolf": ["patch", "spot", "splash", "patch", "spots", "bark", "hound"],
+    "smokepoint": ["fade", "dusk", "dawn", "smoke"],
+    "brindle": ["stripe", "feather", "leaf", "stripe", "fern"],
+    "finleap": ["patch", "spot", "splash", "patch", "spots", "swan"],
+    "spots": ["dapple", "speckle", "spot", "speck", "freckle", "fleck"]
+    
   },
 
   "normal_prefixes": [

@@ -240,6 +240,7 @@ class Sprites:
             'doeclassic', 'doemackerel', 'doemarbled', 'doerosette', 'doesingle',
             'doesinglestripe', 'doesmoke', 'doesokoke',
             'doespeckled', 'doetabby', 'doeticked',
+            'doebraided', 'doebrokenbraided', 'doebrokenmackerel', 'doecharcoal',
         ]
         
         shattered_types = [

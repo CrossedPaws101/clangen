@@ -139,7 +139,8 @@ class Sprites:
             'doeclassic', 'doemackerel', 'doemarbled', 'doerosette', 'doesingle', 'doesinglestripe', 'doesmoke', 'doesokoke',
             'doespeckled', 'doetabby', 'doeticked', 'eraagouti', 'erabengal', 'eraclassic', 'eramackerel', 'eramasked',
             'eramarbled', 'erarosette', 'erasingle', 'erasinglestripe', 'erasmoke', 'erasokoke', 'eraspeckled',
-            'eratabby', 'eraticked', 'shatteredpelts', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle'
+            'eratabby', 'eraticked', 'shatteredpelts', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle',
+            'eraeyes', 'eraeyes2'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -166,11 +167,22 @@ class Sprites:
              'HEATHERBLUE', 'SUNLITICE'],
             ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW']
         ]
+        
+        era_eyes = [
+            ['DARKHAZEL', 'GOLDROSE', 'ROSE', 'REVERSESUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
+            'TURQUOISE', 'VIOLET'],
+            ['RUST', 'PASTEL', 'AVOCADO', 'PASTELLAVENDER', 'ALBINO', 'WINTERROSE', 'PINK', 'MORNING', 'DARKBROWN']
+        ]
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
                 self.make_group('eyes', (col, row), f'eyes{color}')
                 self.make_group('eyes2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(era_eyes):
+            for col, color in enumerate(colors):
+                self.make_group('eraeyes', (col, row), f'eyes{color}')
+                self.make_group('eraeyes2', (col, row), f'eyes2{color}')
 
         # Define white patches
         white_patches = [

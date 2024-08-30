@@ -135,10 +135,20 @@ class Pelt:
     eye_colours = ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
                    'PALEBLUE',
                    'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT', 'SUNLITICE', 'GREENYELLOW',
-                   'BRONZE', 'SILVER']
-    yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'COPPER', 'GREENYELLOW', 'BRONZE', 'SILVER']
-    blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'GREY']
-    green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL']
+                   'BRONZE', 'SILVER',
+                   # era eyes
+                   'DARKHAZEL', 'GOLDROSE', 'ROSE', 'REVERSESUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
+                   'TURQUOISE', 'VIOLET',
+                   'RUST', 'PASTEL', 'AVOCADO', 'PASTELLAVENDER', 'ALBINO', 'WINTERROSE', 'PINK', 'MORNING', 'DARKBROWN'
+                   ]
+    yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 'BRONZE', 'SILVER', 'REVERSESUNLIT', 'MORNING']
+    blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'GREY', 'ICY', 'TURQUOISE', 'WINTERROSE'] 
+    green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'DARKHAZEL', 'MUDDY', 'AVOCADO']
+    red_eyes = ['COPPER', 'ROSE', 'SUNSET', 'ECLIPSE', 'RUST']
+    pink_eyes = ['GOLDROSE', 'PASTEL', 'ALBINO', 'PINK']
+    purple_eyes = ['LAVENDER', 'VIOLET', 'PASTELLAVENDER']
+    dull_eyes = ['BRONZE', 'SILVER', 'GREY', 'BLACK', 'MUDDY', 'DARKBROWN']
+    
 
     # bite scars by @wood pank on discord
 
@@ -210,7 +220,11 @@ class Pelt:
     eye_sprites = [
         'YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'BLUEYELLOW', 'BLUEGREEN',
         'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT',
-        'SUNLITICE', 'GREENYELLOW', 'BRONZE', 'SILVER'
+        'SUNLITICE', 'GREENYELLOW', 'BRONZE', 'SILVER',
+        # era eyes
+        'DARKHAZEL', 'GOLDROSE', 'ROSE', 'REVERSESUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
+        'TURQUOISE', 'VIOLET',
+        'RUST', 'PASTEL', 'AVOCADO', 'PASTELLAVENDER', 'ALBINO', 'WINTERROSE', 'PINK', 'MORNING', 'DARKBROWN' 
     ]
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY',
@@ -425,13 +439,25 @@ class Pelt:
 
         if not random.randint(0, num):
             if self.eye_colour in Pelt.yellow_eyes:
-                eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes])
+                eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.blue_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.green_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                self.eye_colour2 = choice(eye_choice)
+            elif self.eye_colour in Pelt.red_eyes:
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                self.eye_colour2 = choice(eye_choice)
+            elif self.eye_colour in Pelt.pink_eyes:
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                self.eye_colour2 = choice(eye_choice)
+            elif self.eye_colour in Pelt.purple_eyes:
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.dull_eyes])
+                self.eye_colour2 = choice(eye_choice)
+            elif self.eye_colour in Pelt.dull_eyes:
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes])
                 self.eye_colour2 = choice(eye_choice)
 
     def pattern_color_inheritance(self, parents: tuple = (), gender="female"):

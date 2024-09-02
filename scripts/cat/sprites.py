@@ -140,7 +140,7 @@ class Sprites:
             'doespeckled', 'doetabby', 'doeticked', 'eraagouti', 'erabengal', 'eraclassic', 'eramackerel', 'eramasked',
             'eramarbled', 'erarosette', 'erasingle', 'erasinglestripe', 'erasmoke', 'erasokoke', 'eraspeckled',
             'eratabby', 'eraticked', 'shatteredpelts', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle',
-            'eraeyes', 'eraeyes2'
+            'eraeyes', 'eraeyes2', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -165,14 +165,32 @@ class Sprites:
         eye_colors = [
             ['YELLOW', 'AMBER', 'HAZEL', 'PALEGREEN', 'GREEN', 'BLUE', 'DARKBLUE', 'GREY', 'CYAN', 'EMERALD',
              'HEATHERBLUE', 'SUNLITICE'],
-            ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW']
+            ['COPPER', 'SAGE', 'COBALT', 'PALEBLUE', 'BRONZE', 'SILVER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 'FOXGLOVE', 'OLIVE', 'EASTER']
         ]
         
         era_eyes = [
-            ['DARKHAZEL', 'GOLDROSE', 'ROSE', 'REVERSESUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
+            ['DARK HAZEL', 'GOLD ROSE', 'ROSE', 'REVERSE SUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
             'TURQUOISE', 'VIOLET'],
-            ['RUST', 'PASTEL', 'AVOCADO', 'PASTELLAVENDER', 'ALBINO', 'WINTERROSE', 'PINK', 'MORNING', 'DARKBROWN']
+            ['RUST', 'PASTEL', 'AVOCADO', 'PASTEL LAVENDER', 'ALBINO', 'WINTER ROSE', 'PINK', 'MORNING', 'DARK BROWN']
         ]
+        
+        beetle_eyes = [
+            ['ROSY', 'ALGAE', 'SEAFOAM', 'LIGHT FLAME', 'CLOUDY', 'RED', 'SEA', 'SWAMP', 'RAINY', 'AQUAMARINE', 'EARTH', 'PUMPKIN'],
+            ['LILAC', 'PERIWINKLE', 'GALAXY', 'POND', 'DIRT', 'BROWN', 'CEDAR', 'CHRISTMAS', 'COTTON CANDY', 'VALENTINE', 'FIREWORK', 'LUCKY'],
+            ['DARK PINE', 'FALL', 'FOREST FIRE', 'GOLD MOON', 'HALLOWEEN', 'LOBELIA', 'MIDNIGHT', 'MOONSTONE', 'OXIDIZED', 'SNOW', 'BERRY BANANA', 'DAWN SKY'],
+            ['TWILIGHT SKY', 'WORMY', 'BLUE HAZEL', 'THUNDERBOLT', 'VOLCANO', 'SEASHELL', 'PARADOX', 'CURSE', 'BLESSING', 'LIME', 'PALE BROWN', 'CRIMSON']
+        ]
+        
+        beetle_eyes1 = [
+            ['ROSY', 'ALGAE', 'SEAFOAM', 'LIGHT FLAME', 'CLOUDY', 'RED', 'SEA', 'SWAMP', 'RAINY', 'AQUAMARINE', 'EARTH', 'PUMPKIN'],
+            ['LILAC', 'PERIWINKLE', 'GALAXY', 'POND', 'DIRT', 'BROWN', 'CEDAR', 'CHRISTMAS', 'COTTON CANDY', 'VALENTINE', 'FIREWORK', 'LUCKY']
+        ]
+
+        beetle_eyes2 = [
+            ['DARK PINE', 'FALL', 'FOREST FIRE', 'GOLD MOON', 'HALLOWEEN', 'LOBELIA', 'MIDNIGHT', 'MOONSTONE', 'OXIDIZED', 'SNOW', 'BERRY BANANA', 'DAWN SKY'],
+            ['TWILIGHT SKY', 'WORMY', 'BLUE HAZEL', 'THUNDERBOLT', 'VOLCANO', 'SEASHELL', 'PARADOX', 'CURSE', 'BLESSING', 'LIME', 'PALE BROWN', 'CRIMSON']
+        ]
+        
 
         for row, colors in enumerate(eye_colors):
             for col, color in enumerate(colors):
@@ -183,6 +201,27 @@ class Sprites:
             for col, color in enumerate(colors):
                 self.make_group('eraeyes', (col, row), f'eyes{color}')
                 self.make_group('eraeyes2', (col, row), f'eyes2{color}')
+                
+        ''' for row, colors in enumerate(beetle_eyes):
+            if row <= 1:
+                for col, color in enumerate(colors):
+                    self.make_group('beetleeyes', (col, row), f'eyes{color}')
+                    self.make_group('beetleeyes2', (col, row), f'eyes2{color}')
+            else:
+                for col, color in enumerate(colors):
+                    self.make_group('beetlemore', (col, row), f'eyes{color}')
+                    self.make_group('beetlemore2', (col, row), f'eyes2{color}') '''
+                    
+        for row, colors in enumerate(beetle_eyes1):
+            for col, color in enumerate(colors):
+                self.make_group('beetleeyes', (col, row), f'eyes{color}')
+                self.make_group('beetleeyes2', (col, row), f'eyes2{color}')
+        
+        for row, colors in enumerate(beetle_eyes2):
+            for col, color in enumerate(colors):
+                self.make_group('beetlemore', (col, row), f'eyes{color}')
+                self.make_group('beetlemore2', (col, row), f'eyes2{color}')
+        
 
         # Define white patches
         white_patches = [

@@ -137,17 +137,29 @@ class Pelt:
                    'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT', 'SUNLITICE', 'GREENYELLOW',
                    'BRONZE', 'SILVER',
                    # era eyes
-                   'DARKHAZEL', 'GOLDROSE', 'ROSE', 'REVERSESUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
+                   'DARK HAZEL', 'GOLD ROSE', 'ROSE', 'REVERSE SUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
                    'TURQUOISE', 'VIOLET',
-                   'RUST', 'PASTEL', 'AVOCADO', 'PASTELLAVENDER', 'ALBINO', 'WINTERROSE', 'PINK', 'MORNING', 'DARKBROWN'
+                   'RUST', 'PASTEL', 'AVOCADO', 'PASTEL LAVENDER', 'ALBINO', 'WINTER ROSE', 'PINK', 'MORNING', 'DARK BROWN',
+                   # beetle eyes
+                   'ROSY', 'ALGAE', 'SEAFOAM', 'LIGHT FLAME', 'CLOUDY', 'RED', 'SEA', 'SWAMP', 'RAINY', 'AQUAMARINE', 'EARTH', 'PUMPKIN',
+                   'LILAC', 'PERIWINKLE', 'GALAXY', 'POND', 'DIRT', 'BROWN', 'CEDAR', 'CHRISTMAS', 'COTTON CANDY', 'VALENTINE', 'FIREWORK', 'LUCKY',
+                   'DARK PINE', 'FALL', 'FOREST FIRE', 'GOLD MOON', 'HALLOWEEN', 'LOBELIA', 'MIDNIGHT', 'MOONSTONE', 'OXIDIZED', 'SNOW', 'BERRY BANANA', 'DAWN SKY',
+                   'TWILIGHT SKY', 'WORMY', 'BLUE HAZEL', 'THUNDERBOLT', 'VOLCANO', 'SEASHELL', 'PARADOX', 'CURSE', 'BLESSING', 'LIME', 'PALE BROWN', 'CRIMSON',
+                   'FOXGLOVE', 'OLIVE', 'EASTER',
                    ]
-    yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 'BRONZE', 'SILVER', 'REVERSESUNLIT', 'MORNING']
-    blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'GREY', 'ICY', 'TURQUOISE', 'WINTERROSE'] 
-    green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'DARKHAZEL', 'MUDDY', 'AVOCADO']
-    red_eyes = ['COPPER', 'ROSE', 'SUNSET', 'ECLIPSE', 'RUST']
-    pink_eyes = ['GOLDROSE', 'PASTEL', 'ALBINO', 'PINK']
-    purple_eyes = ['LAVENDER', 'VIOLET', 'PASTELLAVENDER']
-    dull_eyes = ['BRONZE', 'SILVER', 'GREY', 'BLACK', 'MUDDY', 'DARKBROWN']
+    yellow_eyes = ['YELLOW', 'AMBER', 'PALEYELLOW', 'GOLD', 'GREENYELLOW', 'REVERSE SUNLIT', 'MORNING', 'PUMPKIN', 'GOLD MOON',
+                   'WORMY']
+    blue_eyes = ['BLUE', 'DARKBLUE', 'CYAN', 'PALEBLUE', 'HEATHERBLUE', 'COBALT', 'SUNLITICE', 'GREY', 'ICY', 'TURQUOISE',
+                 'WINTER ROSE', 'SEAFOAM', 'SEA', 'RAINY', 'POND', 'LOBELIA', 'MOONSTONE'] 
+    green_eyes = ['PALEGREEN', 'GREEN', 'EMERALD', 'SAGE', 'HAZEL', 'DARK HAZEL', 'MUDDY', 'AVOCADO', 'ALGAE',
+                  'AQUAMARINE', 'EARTH', 'LUCKY', 'FOREST FIRE', 'THUNDERBOLT', 'LIME']
+    red_eyes = ['COPPER', 'ROSE', 'SUNSET', 'ECLIPSE', 'RUST', 'RED', 'CEDAR', 'CHRISTMAS', 'VALENTINE', 'FALL', 'OXIDIZED',
+                'VOLCANO', 'BLESSING', 'CRIMSON']
+    pink_eyes = ['GOLD ROSE', 'PASTEL', 'ALBINO', 'PINK', 'ROSY', 'LIGHT FLAME', 'COTTON CANDY', 'BERRY BANANA', 'SEASHELL']
+    purple_eyes = ['LAVENDER', 'VIOLET', 'PASTEL LAVENDER', 'LILAC', 'PERIWINKLE', 'GALAXY', 'FIREWORK', 'HALLOWEEN', 'DAWN SKY',
+                   'TWILIGHT SKY', 'PARADOX', 'CURSE']
+    dull_eyes = ['BRONZE', 'BLACK', 'MUDDY', 'DARK BROWN', 'SWAMP', 'DIRT', 'BROWN', 'DARK PINE', 'MIDNIGHT', 'PALE BROWN']
+    pale_eyes = ['SILVER', 'GREY', 'CLOUDY', 'SNOW', 'BLUE HAZEL']
     
 
     # bite scars by @wood pank on discord
@@ -222,9 +234,15 @@ class Pelt:
         'GREY', 'CYAN', 'EMERALD', 'PALEBLUE', 'PALEYELLOW', 'GOLD', 'HEATHERBLUE', 'COPPER', 'SAGE', 'COBALT',
         'SUNLITICE', 'GREENYELLOW', 'BRONZE', 'SILVER',
         # era eyes
-        'DARKHAZEL', 'GOLDROSE', 'ROSE', 'REVERSESUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
+        'DARK HAZEL', 'GOLD ROSE', 'ROSE', 'REVERSE SUNLIT', 'ICY', 'SUNSET', 'LAVENDER', 'ECLIPSE', 'BLACK', 'MUDDY',
         'TURQUOISE', 'VIOLET',
-        'RUST', 'PASTEL', 'AVOCADO', 'PASTELLAVENDER', 'ALBINO', 'WINTERROSE', 'PINK', 'MORNING', 'DARKBROWN' 
+        'RUST', 'PASTEL', 'AVOCADO', 'PASTEL LAVENDER', 'ALBINO', 'WINTER ROSE', 'PINK', 'MORNING', 'DARK BROWN',
+        # beetle eyes
+        'ROSY', 'ALGAE', 'SEAFOAM', 'LIGHT FLAME', 'CLOUDY', 'RED', 'SEA', 'SWAMP', 'RAINY', 'AQUAMARINE', 'EARTH', 'PUMPKIN', 'LILAC',
+        'PERIWINKLE', 'GALAXY', 'POND', 'DIRT', 'BROWN', 'CEDAR', 'CHRISTMAS', 'COTTON CANDY', 'DARK PINE', 'FALL', 'FOREST FIRE',
+        'GOLD MOON', 'HALLOWEEN', 'LOBELIA', 'MIDNIGHT', 'MOONSTONE', 'OXIDIZED', 'SNOW', 'BERRY BANANA', 'DAWN SKY', 'TWILIGHT SKY',
+        'WORMY', 'BLUE HAZEL', 'THUNDERBOLT', 'VOLCANO', 'SEASHELL', 'PARADOX', 'CURSE', 'BLESSING', 'FOXGLOVE', 'OLIVE', 'EASTER',
+        'VALENTINE', 'FIREWORK', 'LUCKY', 'LIME', 'PALE BROWN', 'CRIMSON'
     ]
     little_white = ['LITTLE', 'LIGHTTUXEDO', 'BUZZARDFANG', 'TIP', 'BLAZE', 'BIB', 'VEE', 'PAWS',
                     'BELLY', 'TAILTIP', 'TOES', 'BROKENBLAZE', 'LILTWO', 'SCOURGE', 'TOESTAIL', 'RAVENPAW', 'HONEY',
@@ -439,25 +457,28 @@ class Pelt:
 
         if not random.randint(0, num):
             if self.eye_colour in Pelt.yellow_eyes:
-                eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.blue_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.green_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.red_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.pink_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.purple_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.dull_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
                 self.eye_colour2 = choice(eye_choice)
             elif self.eye_colour in Pelt.dull_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes])
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.pale_eyes])
+                self.eye_colour2 = choice(eye_choice)
+            elif self.eye_colour in Pelt.pale_eyes:
+                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
                 self.eye_colour2 = choice(eye_choice)
 
     def pattern_color_inheritance(self, parents: tuple = (), gender="female"):
@@ -521,7 +542,7 @@ class Pelt:
                                   'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle'] and self.color not in Pelt.default_colors:
             self.tortiebase = random.choice(Pelt.tortiebases)
         
-        while self.tortiebase in ['braided', 'brokenbraided', 'brokenmackerel', 'charcoal'] and self.color not in Pelt.doe_colours:
+        while self.tortiebase in ['braided', 'brokenbraided', 'brokenmackerel', 'charcoal'] and self.color not in Pelt.doe_colors:
             self.tortiebase = random.choice(Pelt.tortiebases)
 
         # ------------------------------------------------------------------------------------------------------------#

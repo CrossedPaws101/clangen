@@ -119,6 +119,301 @@
     "plural": "cicada wings",
     "singular": "cicada wing"
   },
+  "BARLEY":{
+      "default":"barley stalks",
+      "plural":"barley stalks",
+      "singular":"barley stalk"
+   },
+   "SUNFLOWERS":{
+      "default":"sunflowers",
+      "plural":"mini sunflowers",
+      "singular":"mini sunflower"
+   },
+   "CORNFLOWER":{
+      "default":"cornflower",
+      "plural":"cornflowers",
+      "singular":"cornflower"
+   },
+   "DRY THISTLE":{
+      "default":"dry thistle",
+      "plural":"dried-out thistles",
+      "singular":"dried-out thistle"
+   },
+   "DRAGONFLY WINGS":{
+      "default":"dragonfly wings",
+      "plural":"dragonfly wings",
+      "singular":"pair of dragonfly wings"
+   },
+   "PINE WREATH":{
+      "default":"pine wreath",
+      "plural":"pine wreaths",
+      "singular":"pine wreath"
+   },
+   "ROSE":{
+      "default":"rose",
+      "plural":"roses",
+      "singular":"rose"
+   },
+   "HANGING HERBS":{
+      "default":"hanging herbs",
+      "plural":"herbs",
+      "singular":"collection of herbs"
+   },
+   "LILY":{
+      "default":"lilypad",
+      "plural":"lilypads",
+      "singular":"lilypad"
+   },
+   "HARE TAIL":{
+      "default":"hare tail",
+      "plural":"hare tails",
+      "singular":"hare tail"
+   },
+   "WILDFLOWERS WREATH":{
+      "default":"wildflower wreath",
+      "plural":"wildflowers",
+      "singular":"bunch of wildflowers"
+   },
+   "SEAGLASS":{
+      "default":"seaglass",
+      "plural":"seaglass",
+      "singular":"seaglass"
+   },
+   "PUMPKIN LEAVES":{
+      "default":"pumpkin leaf",
+      "plural":"pumpkin leaves",
+      "singular":"pumpkin leaf"
+   },
+   "DRY MOSS":{
+      "default":"dry moss",
+      "plural":"dried-out moss",
+      "singular":"dried-out moss"
+   },
+   "PINECONE":{
+      "default":"pinecone",
+      "plural":"pinecones",
+      "singular":"pinecone"
+   },
+   "THORN COLLAR":{
+      "default":"thorn collar",
+      "plural":"thorns",
+      "singular":"thorn collar"
+   },
+   "AUTUMN CHAIN":{
+      "default":"autumn chain",
+      "plural":"autumn leaves",
+      "singular":"autumn chain"
+   },
+   "ROWAN BRANCH":{
+      "default":"rowan branch",
+      "plural":"rowan branches",
+      "singular":"rowan branch"
+   },
+   "COLORFUL LEAVES":{
+      "default":"colorful leaves",
+      "plural":"colorful leaves",
+      "singular":"colorful leaf"
+   },
+   "ACORN BRANCH":{
+      "default":"acorn branch",
+      "plural":"acorn branches",
+      "singular":"acorn branch"
+   },
+   "DRY FIR":{
+      "default":"dry fir",
+      "plural":"dried-out fir",
+      "singular":"dried-out fir"
+   },
+   "DRY ROSE":{
+      "default":"dry rose",
+      "plural":"dried-out roses",
+      "singular":"dried-out rose"
+   },
+   "SPIDER'S WEB":{
+      "default":"spiderweb",
+      "plural":"cobwebs",
+      "singular":"spiderweb"
+   },
+   "CROW FEATHERS":{
+      "default":"crow feathers",
+      "plural":"crow feathers",
+      "singular":"crow feather"
+   },
+   "CHERRY BLOSSOM":{
+      "default":"cherry blossom",
+      "plural":"cherry blossoms",
+      "singular":"cherry blossom"
+   },
+   "TULIP PETALS":{
+      "default":"tulip petals",
+      "plural":"tulip petals",
+      "singular":"tulip petals"
+   },
+   "CLOVER FLOWER":{
+      "default":"clover flower",
+      "plural":"clover flowers",
+      "singular":"clover flower"
+   },
+   "PANSIES":{
+      "default":"pansies",
+      "plural":"pansies",
+      "singular":"pansy"
+   },
+   "BELLFLOWERS":{
+      "default":"bellflowers",
+      "plural":"bellflowers",
+      "singular":"bellflower"
+   },
+   "FORSYTHIA":{
+      "default":"forsythia",
+      "plural":"forsythias",
+      "singular":"forsythia"
+   },
+   "MINT LEAF":{
+      "default":"mint leaves",
+      "plural":"mint leaves",
+      "singular":"mint leaf"
+   },
+   "STICKS":{
+      "default":"sticks",
+      "plural":"sticks",
+      "singular":"stick"
+   },
+   "SPRING FEATHERS":{
+      "default":"spring feathers",
+      "plural":"feathers",
+      "singular":"feather"
+   },
+   "SNAIL SHELL":{
+      "default":"snail shell",
+      "plural":"snail shells",
+      "singular":"snail shell"
+   },
+   "CATKIN":{
+      "default":"catkin",
+      "plural":"catkins",
+      "singular":"catkin"
+   },
+   "FERN":{
+      "default":"ferns",
+      "plural":"ferns",
+      "singular":"fern"
+   },
+   "STRAW MANE":{
+      "default":"straw mane",
+      "plural":"straw",
+      "singular":"a bundle of straw"
+   },
+   "MISTLETOE":{
+      "default":"mistletoe",
+      "plural":"mistletoe",
+      "singular":"mistletoe"
+   },
+   "RED POINSETTIA":{
+      "default":"red poinsettia",
+      "plural":"red poinsettias",
+      "singular":"red poinsettias"
+   },
+   "WHITE POINSETTIA":{
+      "default":"white poinsettia",
+      "plural":"white poinsettias",
+      "singular":"white poinsettias"
+   },
+   "COTONEASTER WREATH":{
+      "default":"cotoneaster wreath",
+      "plural":"cotoneaster berries",
+      "singular":"cotoneaster wreath"
+   },
+   "YEW":{
+      "default":"yew",
+      "plural":"yew berries",
+      "singular":"yew berry"
+   },
+   "OAK STICK ANTLERS":{
+      "default":"oak stick antlers",
+      "plural":"oak sticks",
+      "singular":"pair of oak sticks"
+   },
+   "BIRCH STICK ANTLERS":{
+      "default":"birch stick antlers",
+      "plural":"birch sticks",
+      "singular":"pair of birch sticks"
+   },
+   "DOGWOOD":{
+      "default":"dogwood",
+      "plural":"dogwood",
+      "singular":"dogwood"
+   },
+   "FROSTED IVY":{
+      "default":"frosted ivy",
+      "plural":"frosted ivy",
+      "singular":"frosted ivy vine"
+   },
+   "HEATHER":{
+      "default":"heather",
+      "plural":"heather",
+      "singular":"heather plant"
+   },
+   "FANGS":{
+      "default":"fangs",
+      "plural":"old fangs",
+      "singular":"fang collection"
+   },
+   "MONARCH":{
+      "default":"monarch wings",
+      "plural":"monarch wings",
+      "singular":"pair of monarch wings"
+   },
+   "BUTTERFLY":{
+      "default":"blue butterfly wings",
+      "plural":"blue butterfly wings",
+      "singular":"pair of blue butterfly wings"
+   },
+   "BROWN WRAP":{
+      "default":"brown hide and ivy wrap",
+      "plural":"brown hides and ivy wraps",
+      "singular":"brown hide and ivy wrap"
+   },
+   "GRAY WRAP":{
+      "default":"gray hide and ivy wrap",
+      "plural":"gray hides and ivy wraps",
+      "singular":"gray hide and ivy wrap"
+   },
+   "BROWN HIDE":{
+      "default":"brown hide",
+      "plural":"brown hides",
+      "singular":"brown hide"
+   },
+   "GRAY HIDE":{
+      "default":"gray hide",
+      "plural":"gray hides",
+      "singular":"gray hide"
+   },
+   "IVY WRAP":{
+      "default":"ivy wrap",
+      "plural":"ivy wraps",
+      "singular":"ivy wrap"
+   },
+   "HERB WRAP":{
+      "default":"herb wrap",
+      "plural":"herb wraps",
+      "singular":"herb wrap"
+   },
+   "PINK HEARTS":{
+      "default":"pink bleeding hearts",
+      "plural":"pink bleeding hearts",
+      "singular":"pink bleeding heart"
+   },
+   "RED HEARTS":{
+      "default":"red bleeding hearts",
+      "plural":"red bleeding hearts",
+      "singular":"red bleeding heart"
+   },
+   "LILIES":{
+      "default":"white lilies",
+      "plural":"white lilies",
+      "singular":"white lily"
+   },
   "CRIMSON": {
     "default": "crimson leather collar",
     "plural": "crimson leather collars",

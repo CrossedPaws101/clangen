@@ -140,7 +140,8 @@ class Sprites:
             'doespeckled', 'doetabby', 'doeticked', 'eraagouti', 'erabengal', 'eraclassic', 'eramackerel', 'eramasked',
             'eramarbled', 'erarosette', 'erasingle', 'erasinglestripe', 'erasmoke', 'erasokoke', 'eraspeckled',
             'eratabby', 'eraticked', 'shatteredpelts', 'spots', 'lynx', 'smokepoint', 'wildcat', 'wolf', 'finleap', 'brindle',
-            'eraeyes', 'eraeyes2', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2'
+            'eraeyes', 'eraeyes2', 'beetleeyes', 'beetleeyes2', 'beetlemore', 'beetlemore2', 'peltsmask', 'tortiemasktwo',
+            'springwinter', 'summerfall', 'superartsi'
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
@@ -338,10 +339,30 @@ class Sprites:
             ['ORIOLE', 'ROBIN', 'BRINDLE', 'PAIGE', 'ROSETAIL', 'SAFI', 'DAPPLENIGHT', 'BLANKET', 'BELOVED', 'BODY'],
             ['SHILOH', 'FRECKLED', 'HEARTBEAT']
         ]
+        
+        peltmasks = [
+            ['CLASSICMASK', 'SINGLESTRIPEMASK', 'AGOUTMASK', 'BENGALMASK', 'TABBYMASK', 'SOKOKEMASK'],
+            ['SPECKLEDMASK', 'TICKEDMASK', 'SMOKEMASK', 'ROSETTEMASK', 'MARBLEDMASK', 'MACKERELMASK']
+        ]
+        
+        tortiemasktwo = [
+            ['BROKENONE', 'BROKENTWO', 'BROKENTHREE', 'BROKENFOUR', 'GLITCH', 'WAVE'],
+            ['STRIPESMASK', 'KOI', 'SKULL', 'LITTLE', 'O', 'TOADSTOOL'],
+            ['POINTMASK', 'SPOTSCHAOS', 'FOG', 'SUNSET', 'TAIL', 'MOOSTONE']
+        ]
 
         for row, masks in enumerate(tortiepatchesmasks):
             for col, mask in enumerate(masks):
                 self.make_group('tortiepatchesmasks', (col, row), f"tortiemask{mask}")
+                
+        # new torties
+        for row, masks in enumerate(peltmasks):
+            for col, mask in enumerate(masks):
+                self.make_group('peltsmask', (col, row), f"tortiemask{mask}")
+                
+        for row, masks in enumerate(tortiemasktwo):
+            for col, mask in enumerate(masks):
+                self.make_group('tortiemasktwo', (col, row), f"tortiemask{mask}")
 
         # Define skin colors 
         skin_colors = [
@@ -399,6 +420,30 @@ class Sprites:
         wild_data = [
             ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS"]
         ]
+        
+        summerfall_data = [
+            ["BARLEY", "SUNFLOWERS", "CORNFLOWER", "DRY THISTLE", "DRAGONFLY WINGS", "PINE WREATH"],
+            ["ROSE", "HANGING HERBS", "LILY", "HARE TAIL", "WILDFLOWERS WREATH", "SEAGLASS"],
+            ["PUMPKIN LEAVES", "DRY MOSS", "PINECONE", "THORN COLLAR", "AUTUMN CHAIN", "ROWAN BRANCH"],
+            ["COLORFUL LEAVES", "ACORN BRANCH", "DRY FIR", "DRY ROSE", "SPIDER'S WEB", "CROW FEATHERS"]
+        ]
+        
+        springwinter_data = [
+            ["CHERRY BLOSSOM", "TULIP PETALS", "CLOVER FLOWER", "PANSIES", "BELLFLOWERS", "FORSYTHIA"],
+            ["MINT LEAF", "STICKS", "SPRING FEATHERS", "SNAIL SHELL", "CATKIN", "FERN"],
+            ["STRAW MANE", "MISTLETOE", "RED POINSETTIA", "WHITE POINSETTIA", "COTONEASTER WREATH", "YEW"],
+            ["OAK STICK ANTLERS", "BIRCH STICK ANTLERS", "DOGWOOD", "FROSTED IVY", "HEATHER", "FANGS"]
+        ]
+        
+        superartsi_data = [
+            [],
+            ["IVY WRAP", "HERB WRAP", "PINK HEARTS", "RED HEARTS", "LILIES"]
+            
+        ]
+        
+        superartsiwild_data = [
+            ["MONARCH", "BUTTERFLY", "BROWN HIDE", "GRAY HIDE", "BROWN WRAP", "GRAY WRAP"]
+        ]
 
         collars_data = [
             ["CRIMSON", "BLUE", "YELLOW", "CYAN", "RED", "LIME"],
@@ -454,6 +499,27 @@ class Sprites:
         for row, nyloncollars in enumerate(nyloncollars_data):
             for col, nyloncollar in enumerate(nyloncollars):
                 self.make_group('nyloncollars', (col, row), f'collars{nyloncollar}')
+        
+        # new accessories
+        # eragona
+        for row, herbs in enumerate(summerfall_data):
+            for col, herb in enumerate(herbs):
+                self.make_group('summerfall', (col, row), f'acc_herbs{herb}')
+        
+        for row, herbs in enumerate(springwinter_data):
+            for col, herb in enumerate(herbs):
+                self.make_group('springwinter', (col, row), f'acc_herbs{herb}')
+        
+        # superartsi
+        for row, herbs in enumerate(superartsi_data):
+            for col, herb in enumerate(herbs):
+                self.make_group('superartsi', (col, row), f'acc_herbs{herb}')
+        
+        for row, wilds in enumerate(superartsiwild_data):
+            for col, wild in enumerate(wilds):
+                self.make_group('superartsi', (col, 1), f'acc_wild{wild}')
+                
+
 
     def load_symbols(self):
         """

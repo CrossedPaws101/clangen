@@ -3398,7 +3398,15 @@ class Cat:
                 "favourite": self.favourite,
                 "fur_texture": self.pelt.fur_texture,
                 "height": self.pelt.height,
-                "build": self.pelt.build
+                "build": self.pelt.build,
+                "physical_trait_1": self.pelt.physical_trait_1,
+                "physical_trait_2": self.pelt.physical_trait_2,
+                "physical_trait_3": self.pelt.physical_trait_3,
+                "physical_trait_4": self.pelt.physical_trait_4,
+                "physical_trait_hidden": self.pelt.physical_trait_hidden,
+                "physical_trait_hidden_2": self.pelt.physical_trait_hidden_2,
+                "physical_trait_hidden_3": self.pelt.physical_trait_hidden_3,
+                "physical_trait_hidden_4": self.pelt.physical_trait_hidden_4
             }
 
 

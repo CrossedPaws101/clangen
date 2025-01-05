@@ -973,17 +973,6 @@ class Cat:
             colour = "sunlit ice"
         elif colour == "greenyellow":
             colour = "green-yellow"
-        # era eyes
-        elif colour == "darkhazel":
-            colour = "dark hazel"
-        elif colour == "goldrose":
-            colour = "gold rose"
-        elif colour == "reversesunlit":
-            colour = "icelit sun"
-        elif colour == "pastellavender":
-            colour = "pastel lavender"
-        elif colour == "winterrose":
-            colour = "winter rose"
         if self.pelt.eye_colour2:
             if colour2 == "palegreen":
                 colour2 = "pale green"
@@ -999,17 +988,6 @@ class Cat:
                 colour2 = "sunlit ice"
             if colour2 == "greenyellow":
                 colour2 = "green-yellow"
-            # era eyes
-            if colour == "darkhazel":
-                colour2 = "dark hazel"
-            if colour == "goldrose":
-                colour2 = "gold rose"
-            if colour == "reversesunlit":
-                colour2 = "icelit sun"
-            if colour == "pastellavender":
-                colour2 = "pastel lavender"
-            if colour == "winterrose":
-                colour2 = "winter rose"
             colour = colour + " and " + colour2
         return colour
 
@@ -3418,6 +3396,9 @@ class Cat:
                 "opacity": self.pelt.opacity,
                 "prevent_fading": self.prevent_fading,
                 "favourite": self.favourite,
+                "fur_texture": self.pelt.fur_texture,
+                "height": self.pelt.height,
+                "build": self.pelt.build
             }
 
 

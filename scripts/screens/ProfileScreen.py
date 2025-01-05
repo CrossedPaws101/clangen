@@ -841,6 +841,20 @@ class ProfileScreen(Screens):
         # PELT LENGTH
         output += "fur length: " + the_cat.pelt.length
         # NEWLINE ----------
+        output += "\n"
+        
+        # FUR TEXTURE
+        output += "fur texture: " + the_cat.pelt.fur_texture
+        # NEWLINE ----------
+        output += "\n"
+        
+        # HEIGHT
+        output += "height: " + the_cat.pelt.height
+        # NEWLINE ----------
+        output += "\n"
+        
+        # BUILD
+        output += "build: " + the_cat.pelt.build
 
         # ACCESSORY
         if the_cat.pelt.accessory:

@@ -198,6 +198,11 @@ class Pelt:
     plant_accessories = ["MAPLE LEAF", "HOLLY", "BLUE BERRIES", "FORGET ME NOTS", "RYE STALK", "LAUREL",
                          "BLUEBELLS", "NETTLE", "POPPY", "LAVENDER", "HERBS", "PETALS", "DRY HERBS",
                          "OAK LEAVES", "CATMINT", "MAPLE SEED", "JUNIPER",
+                         # new clangen
+                         "CATTAIL", "ORANGE POPPY", "CYAN POPPY", "WHITE POPPY", "PINK POPPY",
+                         "LILY OF THE VALLEY", "SNAPDRAGON", "HEATHER", "GORSE", "JUNIPER", "RASPBERRY", 
+                         "BULB WHITE", "BULB YELLOW", "BULB ORANGE", "BULB PINK", "BULB BLUE", "CLOVER", "DAISY",
+                         "DRY CATMINT", "DRY NETTLES", "DRY LAURELS",
                          # new accessories
                          # eragona
                          "BARLEY", "SUNFLOWERS", "CORNFLOWER", "DRY THISTLE", "DRAGONFLY WINGS", "PINE WREATH",
@@ -207,15 +212,19 @@ class Pelt:
                          "CHERRY BLOSSOM", "TULIP PETALS", "CLOVER FLOWER", "PANSIES", "BELLFLOWERS", "FORSYTHIA",
                          "MINT LEAF", "STICKS", "SPRING FEATHERS", "SNAIL SHELL", "CATKIN", "FERN",
                          "STRAW MANE", "MISTLETOE", "RED POINSETTIA", "WHITE POINSETTIA", "COTONEASTER WREATH", "YEW",
-                         "OAK STICK ANTLERS", "BIRCH STICK ANTLERS", "DOGWOOD", "FROSTED IVY", "HEATHER", "FANGS",
+                         "OAK STICK ANTLERS", "BIRCH STICK ANTLERS", "DOGWOOD", "FROSTED IVY", "HEATHERTWO", "FANGS",
                          # superartsi
                          "IVY WRAP", "HERB WRAP", "PINK HEARTS", "RED HEARTS", "LILIES"
                          ]
 
     wild_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS", "MOTH WINGS", "CICADA WINGS",
+                        # new clangen
+                        "GULL FEATHERS", "SPARROW FEATHERS", "ROSY MOTH WINGS", "MORPHO BUTTERFLY", "MONARCH BUTTERFLY", "BLACK CICADA",
                         # superartsi
                         "MONARCH", "BUTTERFLY", "BROWN HIDE", "GRAY HIDE", "BROWN WRAP", "GRAY WRAP"]
     tail_accessories = ["RED FEATHERS", "BLUE FEATHERS", "JAY FEATHERS",
+                        # new clangen
+                        "GULL FEATHERS", "SPARROW FEATHERS", "CLOVER", "DAISY",
                         # superartsi
                         "BROWN WRAP", "GRAY WRAP", "IVY WRAP", "HERB WRAP", "PINK HEARTS", "RED HEARTS",
                         # eragona
@@ -507,30 +516,12 @@ class Pelt:
             num = 1
 
         if not random.randint(0, num):
-            if self.eye_colour in Pelt.yellow_eyes:
-                eye_choice = choice([Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.blue_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.green_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.red_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.pink_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.purple_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.dull_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.dull_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.pale_eyes])
-                self.eye_colour2 = choice(eye_choice)
-            elif self.eye_colour in Pelt.pale_eyes:
-                eye_choice = choice([Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes])
-                self.eye_colour2 = choice(eye_choice)
+            colour_wheel = [Pelt.yellow_eyes, Pelt.blue_eyes, Pelt.green_eyes, Pelt.red_eyes, Pelt.pink_eyes, Pelt.purple_eyes, Pelt.dull_eyes, Pelt.pale_eyes]
+            for colour in colour_wheel[:]:
+                if self.eye_colour in colour:
+                    colour_wheel.remove(colour) # removes the selected list from the options
+                    self.eye_colour2 = choice(choice(colour_wheel)) # choose from the remaining two lists
+                    break
 
     def pattern_color_inheritance(self, parents: tuple = (), gender="female"):
         # setting parent pelt categories
@@ -855,7 +846,7 @@ class Pelt:
             'sick_young': 19,
             'sick_adult': 18
         }
-        self.reverse = choice([True, False])
+        self.reverse = bool(random.getrandbits(1))
         # skin chances
         self.skin = choice(Pelt.skin_sprites)
 
@@ -1091,8 +1082,8 @@ class Pelt:
             chance = 10 - len(par_points)
         else:
             chance = 40
-
-        if self.name != "Tortie" and not (random.random() * chance):
+        # Chance of point is 1 / chance.
+        if self.name != "Tortie" and not int(random.random() * chance):
             self.points = choice(Pelt.point_markings)
         else:
             self.points = None
@@ -1676,8 +1667,10 @@ class Pelt:
                 if scar in scar_details and scar_details[scar] not in additional_details:
                     additional_details.append(scar_details[scar])
 
-            if len(additional_details) > 1:
-                color_name = f"{color_name} with {', '.join(additional_details[:-1])} and {additional_details[-1]}"
+            if len(additional_details) > 2:
+                color_name = f"{color_name} with {', '.join(additional_details[:-1])}, and {additional_details[-1]}"
+            elif len(additional_details) == 2:
+                color_name = f"{color_name} with {' and '.join(additional_details)}"
             elif additional_details:
                 color_name = f"{color_name} with {additional_details[0]}"
 
